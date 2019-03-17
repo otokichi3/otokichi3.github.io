@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <title>Vue.js part2</title>
+    </head>
+    <body>
+        <h2>趣味</h2>
+        <div id="hobby">
+            <ol>
+                <todo-item
+                    v-for="item in hobbyList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id"
+                ></todo-item>
+            </ol>
+        </div>
+    </body>
+    <script>
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template: '<li>{{ todo.text }}</li>'
+        })
+        var vm = new Vue({
+            el: '#hobby',
+            data: {
+                hobbyList: [
+                    { id: 0, text: 'Badminton' },
+                    { id: 1, text: 'Novel'},
+                    { id: 2, text: 'Running'}
+                ]
+            }
+        })
+    </script>
+</html>
