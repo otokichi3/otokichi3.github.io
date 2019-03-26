@@ -549,6 +549,15 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'self-introduction',
@@ -564,6 +573,12 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -613,6 +628,19 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16208,11 +16236,32 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+      _vm._m(0)
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "contents" }, [
+      _c("h2", [_vm._v("経歴")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("岡山県立玉野高校")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("岡山大学")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("岡山大学大学院")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("日本電気株式会社")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("株式会社ジェニオ")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -16288,11 +16337,26 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+      _vm._m(0)
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "contents" }, [
+      _c("ul", [
+        _c("li", [_vm._v("バドミントン")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("ランニング")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("読書")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -16448,11 +16512,36 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+      _vm._m(0)
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "contents" }, [
+      _c("table", [
+        _c("tr", [
+          _c("th"),
+          _vm._v(" "),
+          _c("th", [_vm._v("言語")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("レベル")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td"),
+          _vm._v(" "),
+          _c("td", [_vm._v("C")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("大学の実習")])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

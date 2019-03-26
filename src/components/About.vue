@@ -2,7 +2,16 @@
     <div>
         <article class="test">
             <h1>{{ title }}</h1>
-            <div class="contents">contents</div>
+            <div class="contents">
+                <h2>経歴</h2>
+                <ul>
+                    <li>岡山県立玉野高校</li>
+                    <li>岡山大学</li>
+                    <li>岡山大学大学院</li>
+                    <li>日本電気株式会社</li>
+                    <li>株式会社ジェニオ</li>
+                </ul>
+            </div>
         </article>
     </div>
 </template>

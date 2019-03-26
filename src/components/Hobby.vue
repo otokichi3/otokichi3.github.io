@@ -2,7 +2,13 @@
     <div>
         <article class="test">
             <h1>{{ title }}</h1>
-            <div class="contents">contents</div>
+            <div class="contents">
+                <ul>
+                    <li>バドミントン</li>
+                    <li>ランニング</li>
+                    <li>読書</li>
+                </ul>
+            </div>
         </article>
     </div>
 </template>
