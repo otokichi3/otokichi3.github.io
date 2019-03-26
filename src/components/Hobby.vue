@@ -17,9 +17,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.contents {
-    width: 80%;
-}
-</style>

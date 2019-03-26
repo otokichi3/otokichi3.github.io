@@ -9,7 +9,6 @@
                 <router-link tag="li" to="/lang"><a>Lang</a></router-link>
             </ul>
         </header>
-        <!-- <router-view/> -->
     </div>
 </template>
 
