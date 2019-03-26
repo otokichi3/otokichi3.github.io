@@ -714,7 +714,6 @@ let toolTip = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             top: '0px',
             left: '0px',
         },
-        title: 'Hobby'
     }
 });
 

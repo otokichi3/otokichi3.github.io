@@ -30,7 +30,6 @@ let toolTip = new Vue({
             top: '0px',
             left: '0px',
         },
-        title: 'Hobby'
     }
 });
 
