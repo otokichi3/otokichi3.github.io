@@ -81,25 +81,25 @@ header ul li.current a {
     border-bottom: 1px solid #f2f2f2;
 }
 
-#contents {
+.contents {
     width: 100%;
     height: 100%;
 }
 
-#contents div {
+.contents div {
     width: 100%;
     height: 100%;
     text-align: center;
     vertical-align: middle;
 }
 
-#contents ul {
+.contents ul {
     float: left;
     position: relative;
     left: 50%;
 }
 
-#contents li {
+.contents li {
     position: relative;
     left: -50%;
 }
