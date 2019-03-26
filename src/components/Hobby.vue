@@ -9,13 +9,12 @@
 
 <script>
 export default {
-  name: 'self-introduction',
-  data () {
-    return {
-      title: 'Hobby',
-      msg: ''
+    name: 'self-introduction',
+    data () {
+        return {
+        title: 'Hobby',
+        }
     }
-  }
 }
 </script>
 

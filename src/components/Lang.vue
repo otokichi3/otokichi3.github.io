@@ -1,22 +1,19 @@
 <template>
     <div>
-        <p>This is {{ title }} Page.</p>
-        <router-link to="/">Go to Home page.</router-link>
-        <router-link to="/about">Go to About page.</router-link>
-        <router-link to="/hobby">Go to Hobby page.</router-link>
-        <router-link to="/works">Go to Works page.</router-link>
-        <router-link to="/lang">Go to Lang page.</router-link>
+        <article class="test">
+            <h1>{{ title }}</h1>
+            <div class="contents">contents</div>
+        </article>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'self-introduction',
-  data () {
-    return {
-      title: 'Lang',
-      msg: ''
+    name: 'self-introduction',
+    data () {
+        return {
+        title: 'Lang',
+        }
     }
-  }
 }
 </script>

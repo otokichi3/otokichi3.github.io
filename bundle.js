@@ -493,7 +493,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'Header'
+    name: 'Header'
 });
 
 /***/ }),
@@ -836,17 +836,14 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'self-introduction',
-  data: function data() {
-    return {
-      title: 'Home',
-      msg: ''
-    };
-  }
+    name: 'self-introduction',
+    data: function data() {
+        return {
+            title: 'Home'
+        };
+    }
 });
 
 /***/ }),
@@ -863,17 +860,14 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'self-introduction',
-  data: function data() {
-    return {
-      title: 'About',
-      msg: ''
-    };
-  }
+    name: 'self-introduction',
+    data: function data() {
+        return {
+            title: 'About'
+        };
+    }
 });
 
 /***/ }),
@@ -892,13 +886,12 @@ function applyToTag (styleElement, obj) {
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'self-introduction',
-  data: function data() {
-    return {
-      title: 'Hobby',
-      msg: ''
-    };
-  }
+    name: 'self-introduction',
+    data: function data() {
+        return {
+            title: 'Hobby'
+        };
+    }
 });
 
 /***/ }),
@@ -915,17 +908,15 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'self-introduction',
-  data: function data() {
-    return {
-      title: 'Works',
-      msg: ''
-    };
-  }
+    name: 'self-introduction',
+    data: function data() {
+        return {
+            title: 'Works',
+            msg: ''
+        };
+    }
 });
 
 /***/ }),
@@ -942,17 +933,14 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'self-introduction',
-  data: function data() {
-    return {
-      title: 'Lang',
-      msg: ''
-    };
-  }
+    name: 'self-introduction',
+    data: function data() {
+        return {
+            title: 'Lang'
+        };
+    }
 });
 
 /***/ }),
@@ -13336,7 +13324,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n    /* font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif; */\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n#contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n#contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\r\n", ""]);
+exports.push([module.i, "\n#app {\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n#contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n#contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\r\n", ""]);
 
 // exports
 
@@ -16137,31 +16125,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("p", [_vm._v("This is " + _vm._s(_vm.title) + " Page.")]),
+  return _c("div", [
+    _c("article", { staticClass: "test" }, [
+      _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Go to Home page.")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/about" } }, [
-        _vm._v("Go to About page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/hobby" } }, [
-        _vm._v("Go to Hobby page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/works" } }, [
-        _vm._v("Go to Works page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/lang" } }, [
-        _vm._v("Go to Lang page.")
-      ])
-    ],
-    1
-  )
+      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -16235,31 +16205,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("p", [_vm._v("This is " + _vm._s(_vm.title) + " Page.")]),
+  return _c("div", [
+    _c("article", { staticClass: "test" }, [
+      _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Go to Home page.")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/about" } }, [
-        _vm._v("Go to About page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/hobby" } }, [
-        _vm._v("Go to Hobby page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/works" } }, [
-        _vm._v("Go to Works page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/lang" } }, [
-        _vm._v("Go to Lang page.")
-      ])
-    ],
-    1
-  )
+      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -16457,31 +16409,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("p", [_vm._v("This is " + _vm._s(_vm.title) + " Page.")]),
+  return _c("div", [
+    _c("article", { staticClass: "test" }, [
+      _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Go to Home page.")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/about" } }, [
-        _vm._v("Go to About page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/hobby" } }, [
-        _vm._v("Go to Hobby page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/works" } }, [
-        _vm._v("Go to Works page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/lang" } }, [
-        _vm._v("Go to Lang page.")
-      ])
-    ],
-    1
-  )
+      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -16555,31 +16489,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("p", [_vm._v("This is " + _vm._s(_vm.title) + " Page.")]),
+  return _c("div", [
+    _c("article", { staticClass: "test" }, [
+      _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Go to Home page.")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/about" } }, [
-        _vm._v("Go to About page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/hobby" } }, [
-        _vm._v("Go to Hobby page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/works" } }, [
-        _vm._v("Go to Works page.")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/lang" } }, [
-        _vm._v("Go to Lang page.")
-      ])
-    ],
-    1
-  )
+      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
