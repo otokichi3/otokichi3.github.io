@@ -527,7 +527,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'self-introduction',
+    name: 'Home',
     data: function data() {
         return {
             title: 'Home'
@@ -560,7 +560,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'self-introduction',
+    name: 'About',
     data: function data() {
         return {
             title: 'About'
@@ -599,13 +599,96 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'self-introduction',
     data: function data() {
         return {
-            title: 'Hobby'
+            title: 'Hobby',
+            sports: ['バドミントン', 'ランニング', '登山', 'サイクリング'],
+            cultures: ['読書', '勉強', 'ボードゲーム'],
+            isBadminton: false,
+            isRunning: false,
+            isClimbing: false,
+            isCycling: false,
+            isNovel: false,
+            isStudy: false,
+            isBoardGame: false
         };
+    },
+
+    methods: {
+        show_sports_detail: function show_sports_detail(num) {
+            switch (num) {
+                case 0:
+                    this.isBadminton = true;
+                    this.isRunning = false;
+                    this.isClimbing = false;
+                    this.isCycling = false;
+                    break;
+                case 1:
+                    this.isBadminton = false;
+                    this.isRunning = true;
+                    this.isClimbing = false;
+                    this.isCycling = false;
+                    break;
+                case 2:
+                    this.isBadminton = false;
+                    this.isRunning = false;
+                    this.isClimbing = true;
+                    this.isCycling = false;
+                    break;
+                case 3:
+                    this.isBadminton = false;
+                    this.isRunning = false;
+                    this.isClimbing = false;
+                    this.isCycling = true;
+                    break;
+                default:
+                    this.isNovel = false;
+                    this.isStudy = false;
+                    this.isBoardGame = false;
+                    break;
+            }
+        },
+        show_culture_detail: function show_culture_detail(num) {
+            switch (num) {
+                case 0:
+                    this.isNovel = true;
+                    this.isStudy = false;
+                    this.isBoardGame = false;
+                    break;
+                case 1:
+                    this.isNovel = false;
+                    this.isStudy = true;
+                    this.isBoardGame = false;
+                    break;
+                case 2:
+                    this.isNovel = false;
+                    this.isStudy = false;
+                    this.isBoardGame = true;
+                    break;
+                default:
+                    this.isBadminton = false;
+                    this.isRunning = false;
+                    this.isClimbing = false;
+                    this.isCycling = false;
+                    break;
+            }
+        }
     }
 });
 
@@ -663,7 +746,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'self-introduction',
+    name: 'Lang',
     data: function data() {
         return {
             title: 'Lang'
@@ -705,30 +788,6 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   components: { App: __WEBPACK_IMPORTED_MODULE_2__App_vue__["a" /* default */] },
   template: '<App/>'
 })
-
-let toolTip = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-    el: '#tool-tip',  // HTML側のidと対応
-    data: {
-        tipStyle: {  // 後述のスタイル用オブジェクト
-            position: 'absolute',
-            top: '0px',
-            left: '0px',
-        },
-    }
-});
-
-// 関数（処理本体）
-let toolTipRendering = () => {
-    return (e) => {
-        toolTip.tipStyle.left = parseInt(e.clientX + 30 /*ここの数値は任意で、変えることによってカーソルからの距離が変わる*/) + 'px';
-        toolTip.tipStyle.top = parseInt(e.clientY + 30 /*同上*/) + 'px';
-    }
-}
-
-// 処理呼び出し（いい言い方が見つからなかった…）
-document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('mousemove', toolTipRendering(), false);
-}, false);
 
 
 /***/ }),
@@ -13073,7 +13132,7 @@ if(false) {
 
 exports = module.exports = __webpack_require__(21)(false);
 // Module
-exports.push([module.i, "\n#header {\r\n    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n.contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\r\n", ""]);
+exports.push([module.i, "\n#header {\r\n    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n.contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\n.contents .sports, .contents .culture {\r\n    display: -webkit-inline-box;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n    -webkit-box-pack: space-evenly;\r\n        -ms-flex-pack: space-evenly;\r\n            justify-content: space-evenly;\n}\n.contents .sports p, .contents .culture p {\r\n    padding: 10px;\r\n    background: #d2d2d2;\n}\r\n", ""]);
 
 
 
@@ -16378,40 +16437,186 @@ var render = function() {
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
       _c("div", { staticClass: "contents" }, [
-        _vm._m(0),
+        _c(
+          "div",
+          { staticClass: "sports" },
+          _vm._l(_vm.sports, function(sport, i) {
+            return _c(
+              "p",
+              {
+                key: sport,
+                on: {
+                  click: function($event) {
+                    return _vm.show_sports_detail(i)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(sport))]
+            )
+          }),
+          0
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "culture" }, [
-          _c("p", [_vm._v("\n                    読書\n                    ")]),
-          _c("div", { staticClass: "tool-tip", style: _vm.tipStyle }, [
-            _vm._v("\n                        tooltip!\n                    ")
-          ]),
-          _vm._v(" "),
-          _c("p"),
-          _vm._v(" "),
-          _c("p", [_vm._v("勉強")]),
-          _vm._v(" "),
-          _c("p", [_vm._v("ボードゲーム")])
-        ])
+        _c(
+          "div",
+          { staticClass: "culture" },
+          _vm._l(_vm.cultures, function(culture, i) {
+            return _c(
+              "p",
+              {
+                key: culture,
+                on: {
+                  click: function($event) {
+                    return _vm.show_culture_detail(i)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(culture))]
+            )
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isBadminton,
+                expression: "isBadminton"
+              }
+            ],
+            staticClass: "badminton"
+          },
+          [_vm._v("\n                bad\n            ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isRunning,
+                expression: "isRunning"
+              }
+            ],
+            staticClass: "running"
+          },
+          [_vm._v("\n                run\n            ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isClimbing,
+                expression: "isClimbing"
+              }
+            ],
+            staticClass: "climbing"
+          },
+          [_vm._v("\n                climb\n            ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isCycling,
+                expression: "isCycling"
+              }
+            ],
+            staticClass: "cycling"
+          },
+          [_vm._v("\n                cycle\n            ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isNovel,
+                expression: "isNovel"
+              }
+            ],
+            staticClass: "novel"
+          },
+          [
+            _vm._v(
+              "\n                直木賞作品を新しい方から読みつつ、たまに寄り道します。"
+            ),
+            _c("br"),
+            _vm._v(
+              "\n                技術書も読みますが、最近はあまり手をつけられていません。\n            "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isStudy,
+                expression: "isStudy"
+              }
+            ],
+            staticClass: "study"
+          },
+          [
+            _vm._v(
+              "\n                政治・経済に興味があります。歴史を学ぶのも好きです。"
+            ),
+            _c("br"),
+            _vm._v(
+              "\n                簿記やFPなど、お金にまつわる知識は早めに獲得しておきたいものです。\n            "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isBoardGame,
+                expression: "isBoardGame"
+              }
+            ],
+            staticClass: "boardGame"
+          },
+          [
+            _vm._v(
+              "\n                ドラスレが最もお気に入りです。ゴキポも好き。"
+            ),
+            _c("br"),
+            _vm._v(
+              "\n                ワーバスが最強という説もありますが。\n            "
+            )
+          ]
+        )
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "sports" }, [
-      _c("p", [_vm._v("バドミントン")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("ランニング")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("登山")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("サイクリング")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

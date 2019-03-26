@@ -18,10 +18,10 @@
 
 <script>
 export default {
-    name: 'self-introduction',
+    name: 'About',
     data () {
         return {
-        title: 'About',
+            title: 'About',
         }
     }
 }

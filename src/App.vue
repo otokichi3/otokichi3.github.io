@@ -92,5 +92,15 @@ header ul li.current a {
     text-align: center;
     vertical-align: middle;
 }
+
+.contents .sports, .contents .culture {
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.contents .sports p, .contents .culture p {
+    padding: 10px;
+    background: #d2d2d2;
+}
 </style>
 

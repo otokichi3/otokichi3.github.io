@@ -22,10 +22,10 @@
 
 <script>
 export default {
-    name: 'self-introduction',
+    name: 'Lang',
     data () {
         return {
-        title: 'Lang',
+            title: 'Lang',
         }
     }
 }
