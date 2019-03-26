@@ -92,5 +92,16 @@ header ul li.current a {
     text-align: center;
     vertical-align: middle;
 }
+
+#contents ul {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+#contents li {
+    position: relative;
+    left: -50%;
+}
 </style>
 
