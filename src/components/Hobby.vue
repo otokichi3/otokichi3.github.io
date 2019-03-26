@@ -25,14 +25,14 @@
 </template>
 
 <script>
-export default {
-    name: 'self-introduction',
-    data () {
-        return {
-        title: 'Hobby',
-        }
-    }
-}
+// export default {
+//     name: 'self-introduction',
+//     data () {
+//         return {
+//         title: 'Hobby',
+//         }
+//     }
+// }
 
 let toolTip = new Vue({
     el: '#tool-tip',  // HTML側のidと対応
@@ -42,6 +42,7 @@ let toolTip = new Vue({
             top: '0px',
             left: '0px',
         },
+        title: 'Hobby'
     }
 });
 
