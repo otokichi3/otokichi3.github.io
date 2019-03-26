@@ -103,5 +103,17 @@ header ul li.current a {
     position: relative;
     left: -50%;
 }
+
+.contents ul, ol {
+    background: #fffcf4;
+    border-radius :8px;
+    box-shadow :0px 0px 5px silver;
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+
+.contents ul li, ol li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
 </style>
 
