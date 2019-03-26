@@ -558,10 +558,6 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'self-introduction',
@@ -592,6 +588,17 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'self-introduction',
@@ -601,6 +608,30 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         };
     }
 });
+
+var toolTip = new Vue({
+    el: '#tool-tip', // HTML側のidと対応
+    data: {
+        tipStyle: { // 後述のスタイル用オブジェクト
+            position: 'absolute',
+            top: '0px',
+            left: '0px'
+        }
+    }
+});
+
+// 関数（処理本体）
+var toolTipRendering = function toolTipRendering() {
+    return function (e) {
+        toolTip.tipStyle.left = parseInt(e.clientX + 30 /*ここの数値は任意で、変えることによってカーソルからの距離が変わる*/) + 'px';
+        toolTip.tipStyle.top = parseInt(e.clientY + 30 /*同上*/) + 'px';
+    };
+};
+
+// 処理呼び出し（いい言い方が見つからなかった…）
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('mousemove', toolTipRendering(), false);
+}, false);
 
 /***/ }),
 /* 10 */
@@ -13021,13 +13052,13 @@ var content = __webpack_require__(20);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(22)("5be4cc20", content, false, {});
+var update = __webpack_require__(22)("650c99b1", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
-     var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+   module.hot.accept("!!../node_modules/css-loader/dist/cjs.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../node_modules/css-loader/dist/cjs.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -13041,96 +13072,101 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(21)(false);
-// imports
+// Module
+exports.push([module.i, "\n#header {\r\n    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n.contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\r\n", ""]);
 
-
-// module
-exports.push([module.i, "\n#header {\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n.contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\n.contents ul, .contents ol {\r\n    float: left;\r\n    position: relative;\r\n    left: 50%;\r\n    background: #fffcf4;\r\n    border-radius :8px;\r\n    -webkit-box-shadow :0px 0px 5px silver;\r\n            box-shadow :0px 0px 5px silver;\r\n    padding: 0.5em 0.5em 0.5em 2em;\n}\n.contents ul li, .contents ol li {\r\n    position: relative;\r\n    left: -50%;\r\n    line-height: 1.5;\r\n    padding: 0.5em 0;\r\n    list-style: none;\n}\r\n", ""]);
-
-// exports
 
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 // css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
 
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
 
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
 };
 
 function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
+  var content = item[1] || '';
+  var cssMapping = item[3];
 
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
+  if (!cssMapping) {
+    return content;
+  }
 
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
 
-	return [content].join('\n');
-}
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
 
-// Adapted from convert-source-map (MIT)
+
 function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
 }
-
 
 /***/ }),
 /* 22 */
@@ -16255,19 +16291,11 @@ var staticRenderFns = [
       _c("ul", [
         _c("li", [_vm._v("岡山県立玉野高校")]),
         _vm._v(" "),
-        _c("li", [_vm._v("↓")]),
-        _vm._v(" "),
         _c("li", [_vm._v("岡山大学")]),
-        _vm._v(" "),
-        _c("li", [_vm._v("↓")]),
         _vm._v(" "),
         _c("li", [_vm._v("岡山大学大学院")]),
         _vm._v(" "),
-        _c("li", [_vm._v("↓")]),
-        _vm._v(" "),
         _c("li", [_vm._v("日本電気株式会社")]),
-        _vm._v(" "),
-        _c("li", [_vm._v("↓")]),
         _vm._v(" "),
         _c("li", [_vm._v("株式会社ジェニオ")])
       ])
@@ -16349,7 +16377,22 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "contents" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "culture" }, [
+          _c("p", [_vm._v("\n                    読書\n                    ")]),
+          _c("div", { staticClass: "tool-tip", style: _vm.tipStyle }, [
+            _vm._v("\n                        tooltip!\n                    ")
+          ]),
+          _vm._v(" "),
+          _c("p"),
+          _vm._v(" "),
+          _c("p", [_vm._v("勉強")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("ボードゲーム")])
+        ])
+      ])
     ])
   ])
 }
@@ -16358,14 +16401,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "contents" }, [
-      _c("ul", [
-        _c("li", [_vm._v("バドミントン")]),
-        _vm._v(" "),
-        _c("li", [_vm._v("ランニング")]),
-        _vm._v(" "),
-        _c("li", [_vm._v("読書")])
-      ])
+    return _c("div", { staticClass: "sports" }, [
+      _c("p", [_vm._v("バドミントン")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("ランニング")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("登山")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("サイクリング")])
     ])
   }
 ]

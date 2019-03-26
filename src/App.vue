@@ -92,23 +92,5 @@ header ul li.current a {
     text-align: center;
     vertical-align: middle;
 }
-
-.contents ul, .contents ol {
-    float: left;
-    position: relative;
-    left: 50%;
-    background: #fffcf4;
-    border-radius :8px;
-    box-shadow :0px 0px 5px silver;
-    padding: 0.5em 0.5em 0.5em 2em;
-}
-
-.contents ul li, .contents ol li {
-    position: relative;
-    left: -50%;
-    line-height: 1.5;
-    padding: 0.5em 0;
-    list-style: none;
-}
 </style>
 
