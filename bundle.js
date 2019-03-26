@@ -570,8 +570,9 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 //
 //
 //
@@ -599,39 +600,14 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 
-// export default {
-//     name: 'self-introduction',
-//     data () {
-//         return {
-//         title: 'Hobby',
-//         }
-//     }
-// }
-
-var toolTip = new Vue({
-    el: '#tool-tip', // HTML側のidと対応
-    data: {
-        tipStyle: { // 後述のスタイル用オブジェクト
-            position: 'absolute',
-            top: '0px',
-            left: '0px'
-        },
-        title: 'Hobby'
+/* harmony default export */ __webpack_exports__["a"] = ({
+    name: 'self-introduction',
+    data: function data() {
+        return {
+            title: 'Hobby'
+        };
     }
 });
-
-// 関数（処理本体）
-var toolTipRendering = function toolTipRendering() {
-    return function (e) {
-        toolTip.tipStyle.left = parseInt(e.clientX + 30 /*ここの数値は任意で、変えることによってカーソルからの距離が変わる*/) + 'px';
-        toolTip.tipStyle.top = parseInt(e.clientY + 30 /*同上*/) + 'px';
-    };
-};
-
-// 処理呼び出し（いい言い方が見つからなかった…）
-document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('mousemove', toolTipRendering(), false);
-}, false);
 
 /***/ }),
 /* 10 */
@@ -729,6 +705,31 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   components: { App: __WEBPACK_IMPORTED_MODULE_2__App_vue__["a" /* default */] },
   template: '<App/>'
 })
+
+let toolTip = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+    el: '#tool-tip',  // HTML側のidと対応
+    data: {
+        tipStyle: {  // 後述のスタイル用オブジェクト
+            position: 'absolute',
+            top: '0px',
+            left: '0px',
+        },
+        title: 'Hobby'
+    }
+});
+
+// 関数（処理本体）
+let toolTipRendering = () => {
+    return (e) => {
+        toolTip.tipStyle.left = parseInt(e.clientX + 30 /*ここの数値は任意で、変えることによってカーソルからの距離が変わる*/) + 'px';
+        toolTip.tipStyle.top = parseInt(e.clientY + 30 /*同上*/) + 'px';
+    }
+}
+
+// 処理呼び出し（いい言い方が見つからなかった…）
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('mousemove', toolTipRendering(), false);
+}, false);
 
 
 /***/ }),
@@ -13489,7 +13490,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
     {
       path: '/hobby',
       name: 'Hobby',
-      component: __WEBPACK_IMPORTED_MODULE_4__components_Hobby_vue__["default"]
+      component: __WEBPACK_IMPORTED_MODULE_4__components_Hobby_vue__["a" /* default */]
     },
     {
       path: '/works',
@@ -16318,7 +16319,6 @@ if (false) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Hobby_vue__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Hobby_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Hobby_vue__);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_236430d2_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Hobby_vue__ = __webpack_require__(32);
 var disposed = false
@@ -16337,7 +16337,7 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Hobby_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Hobby_vue__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_236430d2_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Hobby_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
@@ -16362,7 +16362,7 @@ if (false) {(function () {
   })
 })()}
 
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
 
 
 /***/ }),
