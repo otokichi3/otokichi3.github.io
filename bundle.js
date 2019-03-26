@@ -558,6 +558,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'self-introduction',
@@ -13041,7 +13045,7 @@ exports = module.exports = __webpack_require__(21)(false);
 
 
 // module
-exports.push([module.i, "\n#header {\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n.contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\n.contents ul {\r\n    float: left;\r\n    position: relative;\r\n    left: 50%;\n}\n.contents li {\r\n    position: relative;\r\n    left: -50%;\n}\n.contents ul, .contents ol {\r\n    background: #fffcf4;\r\n    border-radius :8px;\r\n    -webkit-box-shadow :0px 0px 5px silver;\r\n            box-shadow :0px 0px 5px silver;\r\n    padding: 0.5em 0.5em 0.5em 2em;\n}\n.contents ul li, .contents ol li {\r\n    line-height: 1.5;\r\n    padding: 0.5em 0;\n}\r\n", ""]);
+exports.push([module.i, "\n#header {\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n    font-family: 'Lato', 'Noto Sans JP', '\\6E38\\30B4\\30B7\\30C3\\30AF   Medium', '\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53', 'Yu Gothic Medium', YuGothic, '\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN', 'Hiragino Kaku Gothic ProN', '\\30E1\\30A4\\30EA\\30AA', Meiryo, '\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF', 'MS PGothic', sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\r\n            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n.contents div {\r\n    width: 100%;\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\n.contents ul, .contents ol {\r\n    float: left;\r\n    position: relative;\r\n    left: 50%;\r\n    background: #fffcf4;\r\n    border-radius :8px;\r\n    -webkit-box-shadow :0px 0px 5px silver;\r\n            box-shadow :0px 0px 5px silver;\r\n    padding: 0.5em 0.5em 0.5em 2em;\n}\n.contents ul li, .contents ol li {\r\n    position: relative;\r\n    left: -50%;\r\n    line-height: 1.5;\r\n    padding: 0.5em 0;\r\n    list-style: none;\n}\r\n", ""]);
 
 // exports
 
@@ -16251,11 +16255,19 @@ var staticRenderFns = [
       _c("ul", [
         _c("li", [_vm._v("岡山県立玉野高校")]),
         _vm._v(" "),
+        _c("li", [_vm._v("↓")]),
+        _vm._v(" "),
         _c("li", [_vm._v("岡山大学")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("↓")]),
         _vm._v(" "),
         _c("li", [_vm._v("岡山大学大学院")]),
         _vm._v(" "),
+        _c("li", [_vm._v("↓")]),
+        _vm._v(" "),
         _c("li", [_vm._v("日本電気株式会社")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("↓")]),
         _vm._v(" "),
         _c("li", [_vm._v("株式会社ジェニオ")])
       ])

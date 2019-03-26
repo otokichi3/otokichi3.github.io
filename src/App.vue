@@ -93,18 +93,10 @@ header ul li.current a {
     vertical-align: middle;
 }
 
-.contents ul {
+.contents ul, .contents ol {
     float: left;
     position: relative;
     left: 50%;
-}
-
-.contents li {
-    position: relative;
-    left: -50%;
-}
-
-.contents ul, .contents ol {
     background: #fffcf4;
     border-radius :8px;
     box-shadow :0px 0px 5px silver;
@@ -112,8 +104,11 @@ header ul li.current a {
 }
 
 .contents ul li, .contents ol li {
+    position: relative;
+    left: -50%;
     line-height: 1.5;
     padding: 0.5em 0;
+    list-style: none;
 }
 </style>
 
