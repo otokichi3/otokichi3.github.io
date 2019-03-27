@@ -6,19 +6,25 @@
 
 <script>
 export default {
-    name: 'App'
-}
+    name: "App"
+};
 </script>
 
 <style>
 #header {
-    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
+        "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN",
+        "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+        "MS PGothic", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 #app {
-    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
+        "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN",
+        "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+        "MS PGothic", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -40,7 +46,7 @@ header {
     text-align: center;
     border-bottom: 1px solid #ccc;
     background: #fff;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 header ul {
@@ -87,20 +93,88 @@ header ul li.current a {
 }
 
 .contents div {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     text-align: center;
     vertical-align: middle;
 }
 
-.contents .sports, .contents .culture {
+.contents .sports,
+.contents .culture {
+    width: 70%;
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.contents .sports p, .contents .culture p {
-    padding: 10px;
-    background: #d2d2d2;
+.btn-brackets {
+    width: 110px;
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #000;
+    transition: 0.4s;
+}
+
+.btn-brackets {
+    width: 142px;
+}
+
+.btn-brackets:hover {
+    color: #ff7f7f;
+}
+
+.btn-brackets:before,
+.btn-brackets:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 8px;
+    height: 100%;
+    display: inline-block;
+}
+.btn-brackets:before {
+    border-left: solid 1px #ff7f7f;
+    border-top: solid 1px #ff7f7f;
+    border-bottom: solid 1px #ff7f7f;
+    left: 0;
+}
+.btn-brackets:after {
+    content: "";
+    border-top: solid 1px #ff7f7f;
+    border-right: solid 1px #ff7f7f;
+    border-bottom: solid 1px #ff7f7f;
+    right: 0;
+}
+
+.box18 {
+    margin:2em 0;
+    position: relative;
+    padding: 0.25em 1em;
+    border: solid 2px #ffcb8a;
+    border-radius: 3px 0 3px 0;
+}
+
+.box18:before, .box18:after
+{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px #ffcb8a;
+    border-radius: 50%;
+}
+.box18:after {
+    top:-12px;
+    left:-12px;
+}
+.box18:before {
+    bottom:-12px;
+    right:-12px;
+}
+.box18 p {
+    margin: 0; 
+    padding: 0;
 }
 </style>
 
