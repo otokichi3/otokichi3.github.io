@@ -508,7 +508,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: "App"
+  name: "App"
 });
 
 /***/ }),
@@ -558,14 +558,29 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'About',
-    data: function data() {
-        return {
-            title: 'About'
-        };
-    }
+  name: "About",
+  data: function data() {
+    return {
+      title: "About"
+    };
+  }
 });
 
 /***/ }),
@@ -13118,13 +13133,13 @@ var content = __webpack_require__(20);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(22)("5be4cc20", content, false, {});
+var update = __webpack_require__(22)("650c99b1", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
-     var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+   module.hot.accept("!!../node_modules/css-loader/dist/cjs.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../node_modules/css-loader/dist/cjs.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -13138,96 +13153,101 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(21)(false);
-// imports
+// Module
+exports.push([module.i, "\n#header {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100%;\n}\nh1, .contents h2 { text-align: center;\n}\nbody {\r\n  margin: 0;\r\n  background-color: #dedede;\r\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n  background-size: 10px 10px;\r\n  width: 100vw;\r\n  height: 100vh;\n}\nheader {\r\n  top: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n  border-bottom: 1px solid #ccc;\r\n  background: #fff;\r\n  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n  display: table;\r\n  margin: 0 auto;\r\n  padding: 0;\r\n  width: 100%;\r\n  text-align: center;\n}\nheader ul li {\r\n  display: table-cell;\r\n  min-width: 50px;\r\n  border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n  border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n  display: block;\r\n  width: 100%;\r\n  padding: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\n}\nheader ul li a:hover {\r\n  background-color: #fafafa;\n}\nheader ul li.current {\r\n  font-weight: bold;\n}\nheader ul li.current a {\r\n  border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n  width: 100%;\r\n  height: 100%;\n}\n.contents div {\r\n  /* width: 100%; */\r\n  height: 100%;\r\n  text-align: center;\r\n  vertical-align: middle;\n}\n.contents .sports,\r\n.contents .culture {\r\n  width: 70%;\r\n  display: -webkit-inline-box;\r\n  display: -ms-inline-flexbox;\r\n  display: inline-flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\n}\n.btn-brackets {\r\n  width: 110px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.5em 1em;\r\n  text-decoration: none;\r\n  color: #000;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\n}\n.btn-brackets {\r\n  width: 142px;\n}\n.btn-brackets:hover {\r\n  color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n  position: absolute;\r\n  top: 0;\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 100%;\r\n  display: inline-block;\n}\n.btn-brackets:before {\r\n  border-left: solid 1px #ff7f7f;\r\n  border-top: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  left: 0;\n}\n.btn-brackets:after {\r\n  content: \"\";\r\n  border-top: solid 1px #ff7f7f;\r\n  border-right: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  right: 0;\n}\n.box18 {\r\n  margin: 2em 0;\r\n  position: relative;\r\n  padding: 0.25em 1em;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 3px 0 3px 0;\n}\n.box18:before,\r\n.box18:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 50%;\n}\n.box18:after {\r\n  top: -12px;\r\n  left: -12px;\n}\n.box18:before {\r\n  bottom: -12px;\r\n  right: -12px;\n}\n.box18 p {\r\n  margin: 0;\r\n  padding: 0;\n}\n.cp_stepflow07 {\r\n\tfont-size: 80%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -ms-flexbox;\r\n\tdisplay: flex;\r\n\tmargin: 0 0 1em;\r\n\tpadding: 0;\n}\n.cp_stepflow07 > li {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: auto;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\ttext-align: center;\r\n\ttext-overflow: ellipsis;\r\n\tcolor: #b0bec5;\r\n\t -ms-flex: 1;\r\n\t-moz-flex: 1;\r\n\t-webkit-box-flex: 1;\r\n\t     flex: 1;\n}\n.cp_stepflow07 > li .bubble::after,\r\n.cp_stepflow07 > li .bubble::before {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tright: 50%;\r\n\tleft: 50%;\r\n\tdisplay: block;\r\n\twidth: 90%;\r\n\theight: 8px;\r\n\tcontent: '';\r\n\t-webkit-transform: translateX(-50%);\r\n\t        transform: translateX(-50%);\r\n\tbackground-color: #b0bec5;\n}\n.cp_stepflow07 > li .bubble + span {\r\n\tdisplay: block;\r\n\tmargin-top: 1em;\n}\n.cp_stepflow07 > li.completed,\r\n.cp_stepflow07 > li.completed .bubble {\r\n\tcolor: #00acc1;\n}\n.cp_stepflow07 > li.completed .bubble,\r\n.cp_stepflow07 > li.completed .bubble::after,\r\n.cp_stepflow07 > li.completed .bubble::before {\r\n\tbackground-color: #4dd0e1;\n}\n.cp_stepflow07 > li.active,\r\n.cp_stepflow07 > li.active .bubble {\r\n\tfont-weight: bold;\r\n\tcolor: #f57c00;\n}\n.cp_stepflow07 > li.active .bubble,\r\n.cp_stepflow07 > li.active .bubble::after,\r\n.cp_stepflow07 > li.active .bubble::before {\r\n\tbackground-color: #fb8c00;\n}\r\n", ""]);
 
-
-// module
-exports.push([module.i, "\n#header {\r\n    font-family: \"Lato\", \"Noto Sans JP\", \"\\6E38\\30B4\\30B7\\30C3\\30AF   Medium\", \"\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53\",\r\n        \"Yu Gothic Medium\", YuGothic, \"\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN\",\r\n        \"Hiragino Kaku Gothic ProN\", \"\\30E1\\30A4\\30EA\\30AA\", Meiryo, \"\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF\",\r\n        \"MS PGothic\", sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n    font-family: \"Lato\", \"Noto Sans JP\", \"\\6E38\\30B4\\30B7\\30C3\\30AF   Medium\", \"\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53\",\r\n        \"Yu Gothic Medium\", YuGothic, \"\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN\",\r\n        \"Hiragino Kaku Gothic ProN\", \"\\30E1\\30A4\\30EA\\30AA\", Meiryo, \"\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF\",\r\n        \"MS PGothic\", sans-serif;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    text-align: center;\r\n    height: 100%;\n}\nbody {\r\n    margin: 0;\r\n    background-color: #dedede;\r\n    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n    background-size: 10px 10px;\r\n    width: 100vw;\r\n    height: 100vh;\n}\nheader {\r\n    top: 0;\r\n    width: 100%;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ccc;\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n    display: table;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    width: 100%;\r\n    text-align: center;\n}\nheader ul li {\r\n    display: table-cell;\r\n    min-width: 50px;\r\n    border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n    border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 10px 0;\r\n    text-decoration: none;\r\n    color: black;\n}\nheader ul li a:hover {\r\n    background-color: #fafafa;\n}\nheader ul li.current {\r\n    font-weight: bold;\n}\nheader ul li.current a {\r\n    border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n    width: 100%;\r\n    height: 100%;\n}\n.contents div {\r\n    /* width: 100%; */\r\n    height: 100%;\r\n    text-align: center;\r\n    vertical-align: middle;\n}\n.contents .sports,\r\n.contents .culture {\r\n    width: 70%;\r\n    display: -webkit-inline-box;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\n}\n.btn-brackets {\r\n    width: 110px;\r\n    display: inline-block;\r\n    position: relative;\r\n    padding: 0.5em 1em;\r\n    text-decoration: none;\r\n    color: #000;\r\n    -webkit-transition: 0.4s;\r\n    transition: 0.4s;\n}\n.btn-brackets {\r\n    width: 142px;\n}\n.btn-brackets:hover {\r\n    color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n    position: absolute;\r\n    top: 0;\r\n    content: \"\";\r\n    width: 8px;\r\n    height: 100%;\r\n    display: inline-block;\n}\n.btn-brackets:before {\r\n    border-left: solid 1px #ff7f7f;\r\n    border-top: solid 1px #ff7f7f;\r\n    border-bottom: solid 1px #ff7f7f;\r\n    left: 0;\n}\n.btn-brackets:after {\r\n    content: \"\";\r\n    border-top: solid 1px #ff7f7f;\r\n    border-right: solid 1px #ff7f7f;\r\n    border-bottom: solid 1px #ff7f7f;\r\n    right: 0;\n}\n.box18 {\r\n    margin:2em 0;\r\n    position: relative;\r\n    padding: 0.25em 1em;\r\n    border: solid 2px #ffcb8a;\r\n    border-radius: 3px 0 3px 0;\n}\n.box18:before, .box18:after\r\n{\r\n    content: '';\r\n    position: absolute;\r\n    width:10px;\r\n    height: 10px;\r\n    border: solid 2px #ffcb8a;\r\n    border-radius: 50%;\n}\n.box18:after {\r\n    top:-12px;\r\n    left:-12px;\n}\n.box18:before {\r\n    bottom:-12px;\r\n    right:-12px;\n}\n.box18 p {\r\n    margin: 0; \r\n    padding: 0;\n}\r\n", ""]);
-
-// exports
 
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 // css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
 
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
 
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
 };
 
 function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
+  var content = item[1] || '';
+  var cssMapping = item[3];
 
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
+  if (!cssMapping) {
+    return content;
+  }
 
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
 
-	return [content].join('\n');
-}
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
 
-// Adapted from convert-source-map (MIT)
+
 function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
 }
-
 
 /***/ }),
 /* 22 */
@@ -16349,16 +16369,36 @@ var staticRenderFns = [
     return _c("div", { staticClass: "contents" }, [
       _c("h2", [_vm._v("経歴")]),
       _vm._v(" "),
-      _c("ul", [
-        _c("li", [_vm._v("岡山県立玉野高校")]),
+      _c("ul", { staticClass: "cp_stepflow07" }, [
+        _c("li", { staticClass: "completed" }, [
+          _c("span", { staticClass: "bubble" }),
+          _vm._v(" "),
+          _c("span", [_vm._v("岡山県立玉野高校")])
+        ]),
         _vm._v(" "),
-        _c("li", [_vm._v("岡山大学")]),
+        _c("li", { staticClass: "completed" }, [
+          _c("span", { staticClass: "bubble" }),
+          _vm._v(" "),
+          _c("span", [_vm._v("岡山大学")])
+        ]),
         _vm._v(" "),
-        _c("li", [_vm._v("岡山大学大学院")]),
+        _c("li", { staticClass: "active" }, [
+          _c("span", { staticClass: "bubble" }),
+          _vm._v(" "),
+          _c("span", [_vm._v("岡山大学大学院")])
+        ]),
         _vm._v(" "),
-        _c("li", [_vm._v("日本電気株式会社")]),
+        _c("li", [
+          _c("span", { staticClass: "bubble" }),
+          _vm._v(" "),
+          _c("span", [_vm._v("日本電気株式会社")])
+        ]),
         _vm._v(" "),
-        _c("li", [_vm._v("株式会社ジェニオ")])
+        _c("li", [
+          _c("span", { staticClass: "bubble" }),
+          _vm._v(" "),
+          _c("span", [_vm._v("株式会社ジェニオ")])
+        ])
       ])
     ])
   }

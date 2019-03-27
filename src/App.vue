@@ -1,180 +1,240 @@
 <template>
-    <div id="app">
-        <router-view/>
-    </div>
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "App"
+  name: "App"
 };
 </script>
 
 <style>
 #header {
-    font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
-        "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN",
-        "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
-        "MS PGothic", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
+    "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+    "MS PGothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #app {
-    font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
-        "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN",
-        "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
-        "MS PGothic", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    height: 100%;
+  font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
+    "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+    "MS PGothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
+h1, .contents h2 { text-align: center;}
+
 body {
-    margin: 0;
-    background-color: #dedede;
-    background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);
-    background-size: 10px 10px;
-    width: 100vw;
-    height: 100vh;
+  margin: 0;
+  background-color: #dedede;
+  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);
+  background-size: 10px 10px;
+  width: 100vw;
+  height: 100vh;
 }
 
 header {
-    top: 0;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-    background: #fff;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  top: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 header ul {
-    display: table;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    text-align: center;
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
 header ul li {
-    display: table-cell;
-    min-width: 50px;
-    border-right: 1px solid #ccc;
+  display: table-cell;
+  min-width: 50px;
+  border-right: 1px solid #ccc;
 }
 
 header ul li:first-child {
-    border-left: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 
 header ul li a {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-decoration: none;
-    color: black;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: black;
 }
 
 header ul li a:hover {
-    background-color: #fafafa;
+  background-color: #fafafa;
 }
 
 header ul li.current {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 header ul li.current a {
-    border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .contents {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .contents div {
-    /* width: 100%; */
-    height: 100%;
-    text-align: center;
-    vertical-align: middle;
+  /* width: 100%; */
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .contents .sports,
 .contents .culture {
-    width: 70%;
-    display: inline-flex;
-    justify-content: space-between;
+  width: 70%;
+  display: inline-flex;
+  justify-content: space-between;
 }
 
 .btn-brackets {
-    width: 110px;
-    display: inline-block;
-    position: relative;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    color: #000;
-    transition: 0.4s;
+  width: 110px;
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #000;
+  transition: 0.4s;
 }
 
 .btn-brackets {
-    width: 142px;
+  width: 142px;
 }
 
 .btn-brackets:hover {
-    color: #ff7f7f;
+  color: #ff7f7f;
 }
 
 .btn-brackets:before,
 .btn-brackets:after {
-    position: absolute;
-    top: 0;
-    content: "";
-    width: 8px;
-    height: 100%;
-    display: inline-block;
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 8px;
+  height: 100%;
+  display: inline-block;
 }
 .btn-brackets:before {
-    border-left: solid 1px #ff7f7f;
-    border-top: solid 1px #ff7f7f;
-    border-bottom: solid 1px #ff7f7f;
-    left: 0;
+  border-left: solid 1px #ff7f7f;
+  border-top: solid 1px #ff7f7f;
+  border-bottom: solid 1px #ff7f7f;
+  left: 0;
 }
 .btn-brackets:after {
-    content: "";
-    border-top: solid 1px #ff7f7f;
-    border-right: solid 1px #ff7f7f;
-    border-bottom: solid 1px #ff7f7f;
-    right: 0;
+  content: "";
+  border-top: solid 1px #ff7f7f;
+  border-right: solid 1px #ff7f7f;
+  border-bottom: solid 1px #ff7f7f;
+  right: 0;
 }
 
 .box18 {
-    margin:2em 0;
-    position: relative;
-    padding: 0.25em 1em;
-    border: solid 2px #ffcb8a;
-    border-radius: 3px 0 3px 0;
+  margin: 2em 0;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
 }
 
-.box18:before, .box18:after
-{
-    content: '';
-    position: absolute;
-    width:10px;
-    height: 10px;
-    border: solid 2px #ffcb8a;
-    border-radius: 50%;
+.box18:before,
+.box18:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
 }
 .box18:after {
-    top:-12px;
-    left:-12px;
+  top: -12px;
+  left: -12px;
 }
 .box18:before {
-    bottom:-12px;
-    right:-12px;
+  bottom: -12px;
+  right: -12px;
 }
 .box18 p {
-    margin: 0; 
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+.cp_stepflow07 {
+	font-size: 80%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0 0 1em;
+	padding: 0;
+}
+.cp_stepflow07 > li {
+	position: relative;
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	text-overflow: ellipsis;
+	color: #b0bec5;
+	 -ms-flex: 1;
+	-moz-flex: 1;
+	-webkit-box-flex: 1;
+	     flex: 1;
+}
+.cp_stepflow07 > li .bubble::after,
+.cp_stepflow07 > li .bubble::before {
+	position: absolute;
+	top: 0px;
+	right: 50%;
+	left: 50%;
+	display: block;
+	width: 90%;
+	height: 8px;
+	content: '';
+	transform: translateX(-50%);
+	background-color: #b0bec5;
+}
+.cp_stepflow07 > li .bubble + span {
+	display: block;
+	margin-top: 1em;
+}
+.cp_stepflow07 > li.completed,
+.cp_stepflow07 > li.completed .bubble {
+	color: #00acc1;
+}
+.cp_stepflow07 > li.completed .bubble,
+.cp_stepflow07 > li.completed .bubble::after,
+.cp_stepflow07 > li.completed .bubble::before {
+	background-color: #4dd0e1;
+}
+.cp_stepflow07 > li.active,
+.cp_stepflow07 > li.active .bubble {
+	font-weight: bold;
+	color: #f57c00;
+}
+.cp_stepflow07 > li.active .bubble,
+.cp_stepflow07 > li.active .bubble::after,
+.cp_stepflow07 > li.active .bubble::before {
+	background-color: #fb8c00;
 }
 </style>
 
