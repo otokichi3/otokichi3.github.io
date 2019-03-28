@@ -1,20 +1,28 @@
 <template>
-    <div>
-        <article class="test">
-            <h1>{{ title }}</h1>
-            <div class="contents">contents</div>
-        </article>
-    </div>
+  <div>
+    <article class="test">
+      <h1>{{ title }}</h1>
+      <div class="contents">
+        <div class="cssgrid">
+          <div>アイテム1</div>
+          <div>アイテム2</div>
+          <div>アイテム3</div>
+          <div>アイテム4</div>
+          <div>アイテム5</div>
+        </div>
+      </div>
+    </article>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'self-introduction',
-    data() {
-        return {
-            title: 'Works',
-            msg: ''
-        }
-    }
-}
+  name: "self-introduction",
+  data() {
+    return {
+      title: "Works",
+      msg: ""
+    };
+  }
+};
 </script>

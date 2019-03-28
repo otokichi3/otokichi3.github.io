@@ -525,6 +525,8 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'Home',
@@ -573,13 +575,63 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "About",
   data: function data() {
     return {
-      title: "About"
+      title: "About",
+      active: [false, false, false, false, false],
+      completed: [false, false, false, false, false],
+      content_list: ["\u5927\u3057\u3066\u52C9\u5F37\u306F\u3057\u3066\u3044\u307E\u305B\u3093\u3067\u3057\u305F\u304C\u3001\u52C9\u5F37\u306F\u51FA\u6765\u307E\u3057\u305F\u3002\u6388\u696D\u3068\u5BBF\u984C\u3092\u771F\u9762\u76EE\u306B\u805E\u3044\u3066\u3044\u305F\u304B\u3089\u3060\u3068\u601D\u3044\u307E\u3059\u3002\n          \u521D\u5FC3\u8005\u306A\u304C\u3089\u30BD\u30D5\u30C8\u30C6\u30CB\u30B9\u90E8\u306B\u5165\u308A\u3001\u524D\u885B\u3092\u5F35\u3063\u3066\u3044\u307E\u3057\u305F\u3002\u4E00\u5FDC\u3001\u770C\u5927\u4F1A\u30D9\u30B9\u30C8\uFF14\u306B\u5165\u308A\u307E\u3057\u305F\u3002\u56E3\u4F53\u3067\u3059\u304C\u3002\n          \u9752\u6625\u306E\u611F\u306F\u3042\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u3057\u3001\u3067\u304D\u308C\u3070\u540C\u7A93\u4F1A\u3059\u3089\u53C2\u52A0\u3057\u305F\u304F\u306A\u3044\u3050\u3089\u3044\u3001\u597D\u304D\u3058\u3083\u306A\u3044\u3067\u3059\u3002", "", "", "", ""]
     };
+  },
+
+  methods: {
+    activate: function activate(idx) {
+      if (this.completed[idx] === false) {
+        this.active.splice(idx, 1, true);
+      }
+    },
+    deactivate: function deactivate(idx) {
+      if (this.completed[idx] === false) {
+        this.active.splice(idx, 1, false);
+      }
+    },
+    toggle_completion: function toggle_completion(idx) {
+      if (this.active[idx] === true) {
+        this.active.splice(idx, 1, false);
+      }
+      this.completed.splice(idx, 1, !this.completed[idx]);
+    }
   }
 });
 
@@ -635,83 +687,93 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    data: function data() {
-        return {
-            title: 'Hobby',
-            sports: ['バドミントン', 'ランニング', '登山', 'サイクリング'],
-            cultures: ['読書', '勉強', 'ボードゲーム'],
-            isBadminton: false,
-            isRunning: false,
-            isClimbing: false,
-            isCycling: false,
-            isNovel: false,
-            isStudy: false,
-            isBoardGame: false
-        };
-    },
+  data: function data() {
+    return {
+      title: "Hobby",
+      sports: ["バドミントン", "ランニング", "登山", "サイクリング"],
+      cultures: ["読書", "勉強", "ボードゲーム"],
+      isBadminton: false,
+      isRunning: false,
+      isClimbing: false,
+      isCycling: false,
+      isNovel: false,
+      isStudy: false,
+      isBoardGame: false
+    };
+  },
 
-    methods: {
-        show_sports_detail: function show_sports_detail(num) {
-            switch (num) {
-                case 0:
-                    this.isBadminton = true;
-                    this.isRunning = false;
-                    this.isClimbing = false;
-                    this.isCycling = false;
-                    break;
-                case 1:
-                    this.isBadminton = false;
-                    this.isRunning = true;
-                    this.isClimbing = false;
-                    this.isCycling = false;
-                    break;
-                case 2:
-                    this.isBadminton = false;
-                    this.isRunning = false;
-                    this.isClimbing = true;
-                    this.isCycling = false;
-                    break;
-                case 3:
-                    this.isBadminton = false;
-                    this.isRunning = false;
-                    this.isClimbing = false;
-                    this.isCycling = true;
-                    break;
-                default:
-                    break;
-            }
-            this.isNovel = false;
-            this.isStudy = false;
-            this.isBoardGame = false;
-        },
-        show_culture_detail: function show_culture_detail(num) {
-            switch (num) {
-                case 0:
-                    this.isNovel = true;
-                    this.isStudy = false;
-                    this.isBoardGame = false;
-                    break;
-                case 1:
-                    this.isNovel = false;
-                    this.isStudy = true;
-                    this.isBoardGame = false;
-                    break;
-                case 2:
-                    this.isNovel = false;
-                    this.isStudy = false;
-                    this.isBoardGame = true;
-                    break;
-                default:
-                    break;
-            }
-            this.isBadminton = false;
-            this.isRunning = false;
-            this.isClimbing = false;
-            this.isCycling = false;
-        }
+  methods: {
+    show_sports_detail: function show_sports_detail(num) {
+      switch (num) {
+        case 0:
+          this.isBadminton = true;
+          this.isRunning = false;
+          this.isClimbing = false;
+          this.isCycling = false;
+          break;
+        case 1:
+          this.isBadminton = false;
+          this.isRunning = true;
+          this.isClimbing = false;
+          this.isCycling = false;
+          break;
+        case 2:
+          this.isBadminton = false;
+          this.isRunning = false;
+          this.isClimbing = true;
+          this.isCycling = false;
+          break;
+        case 3:
+          this.isBadminton = false;
+          this.isRunning = false;
+          this.isClimbing = false;
+          this.isCycling = true;
+          break;
+        default:
+          break;
+      }
+      this.isNovel = false;
+      this.isStudy = false;
+      this.isBoardGame = false;
+    },
+    show_culture_detail: function show_culture_detail(num) {
+      switch (num) {
+        case 0:
+          this.isNovel = true;
+          this.isStudy = false;
+          this.isBoardGame = false;
+          break;
+        case 1:
+          this.isNovel = false;
+          this.isStudy = true;
+          this.isBoardGame = false;
+          break;
+        case 2:
+          this.isNovel = false;
+          this.isStudy = false;
+          this.isBoardGame = true;
+          break;
+        default:
+          break;
+      }
+      this.isBadminton = false;
+      this.isRunning = false;
+      this.isClimbing = false;
+      this.isCycling = false;
     }
+  }
 });
 
 /***/ }),
@@ -728,15 +790,23 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'self-introduction',
-    data: function data() {
-        return {
-            title: 'Works',
-            msg: ''
-        };
-    }
+  name: "self-introduction",
+  data: function data() {
+    return {
+      title: "Works",
+      msg: ""
+    };
+  }
 });
 
 /***/ }),
@@ -13154,7 +13224,7 @@ if(false) {
 
 exports = module.exports = __webpack_require__(21)(false);
 // Module
-exports.push([module.i, "\n#header {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100%;\n}\nh1, .contents h2 { text-align: center;\n}\nbody {\r\n  margin: 0;\r\n  background-color: #dedede;\r\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n  background-size: 10px 10px;\r\n  width: 100vw;\r\n  height: 100vh;\n}\nheader {\r\n  top: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n  border-bottom: 1px solid #ccc;\r\n  background: #fff;\r\n  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n  display: table;\r\n  margin: 0 auto;\r\n  padding: 0;\r\n  width: 100%;\r\n  text-align: center;\n}\nheader ul li {\r\n  display: table-cell;\r\n  min-width: 50px;\r\n  border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n  border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n  display: block;\r\n  width: 100%;\r\n  padding: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\n}\nheader ul li a:hover {\r\n  background-color: #fafafa;\n}\nheader ul li.current {\r\n  font-weight: bold;\n}\nheader ul li.current a {\r\n  border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n  width: 100%;\r\n  height: 100%;\n}\n.contents div {\r\n  /* width: 100%; */\r\n  height: 100%;\r\n  text-align: center;\r\n  vertical-align: middle;\n}\n.contents .sports,\r\n.contents .culture {\r\n  width: 70%;\r\n  display: -webkit-inline-box;\r\n  display: -ms-inline-flexbox;\r\n  display: inline-flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\n}\n.btn-brackets {\r\n  width: 110px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.5em 1em;\r\n  text-decoration: none;\r\n  color: #000;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\n}\n.btn-brackets {\r\n  width: 142px;\n}\n.btn-brackets:hover {\r\n  color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n  position: absolute;\r\n  top: 0;\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 100%;\r\n  display: inline-block;\n}\n.btn-brackets:before {\r\n  border-left: solid 1px #ff7f7f;\r\n  border-top: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  left: 0;\n}\n.btn-brackets:after {\r\n  content: \"\";\r\n  border-top: solid 1px #ff7f7f;\r\n  border-right: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  right: 0;\n}\n.box18 {\r\n  margin: 2em 0;\r\n  position: relative;\r\n  padding: 0.25em 1em;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 3px 0 3px 0;\n}\n.box18:before,\r\n.box18:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 50%;\n}\n.box18:after {\r\n  top: -12px;\r\n  left: -12px;\n}\n.box18:before {\r\n  bottom: -12px;\r\n  right: -12px;\n}\n.box18 p {\r\n  margin: 0;\r\n  padding: 0;\n}\n.cp_stepflow07 {\r\n\tfont-size: 80%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -ms-flexbox;\r\n\tdisplay: flex;\r\n\tmargin: 0 0 1em;\r\n\tpadding: 0;\n}\n.cp_stepflow07 > li {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: auto;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\ttext-align: center;\r\n\ttext-overflow: ellipsis;\r\n\tcolor: #b0bec5;\r\n\t -ms-flex: 1;\r\n\t-moz-flex: 1;\r\n\t-webkit-box-flex: 1;\r\n\t     flex: 1;\n}\n.cp_stepflow07 > li .bubble::after,\r\n.cp_stepflow07 > li .bubble::before {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tright: 50%;\r\n\tleft: 50%;\r\n\tdisplay: block;\r\n\twidth: 90%;\r\n\theight: 8px;\r\n\tcontent: '';\r\n\t-webkit-transform: translateX(-50%);\r\n\t        transform: translateX(-50%);\r\n\tbackground-color: #b0bec5;\n}\n.cp_stepflow07 > li .bubble + span {\r\n\tdisplay: block;\r\n\tmargin-top: 1em;\n}\n.cp_stepflow07 > li.completed,\r\n.cp_stepflow07 > li.completed .bubble {\r\n\tcolor: #00acc1;\n}\n.cp_stepflow07 > li.completed .bubble,\r\n.cp_stepflow07 > li.completed .bubble::after,\r\n.cp_stepflow07 > li.completed .bubble::before {\r\n\tbackground-color: #4dd0e1;\n}\n.cp_stepflow07 > li.active,\r\n.cp_stepflow07 > li.active .bubble {\r\n\tfont-weight: bold;\r\n\tcolor: #f57c00;\n}\n.cp_stepflow07 > li.active .bubble,\r\n.cp_stepflow07 > li.active .bubble::after,\r\n.cp_stepflow07 > li.active .bubble::before {\r\n\tbackground-color: #fb8c00;\n}\r\n", ""]);
+exports.push([module.i, "\n#header {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100%;\n}\nh1, .contents h2 { text-align: center;\n}\nbody {\r\n  margin: 0;\r\n  background-color: #dedede;\r\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n  background-size: 10px 10px;\r\n  width: 100vw;\r\n  height: 100vh;\n}\nheader {\r\n  top: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n  border-bottom: 1px solid #ccc;\r\n  background: #fff;\r\n  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n  display: table;\r\n  margin: 0 auto;\r\n  padding: 0;\r\n  width: 100%;\r\n  text-align: center;\n}\nheader ul li {\r\n  display: table-cell;\r\n  min-width: 50px;\r\n  border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n  border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n  display: block;\r\n  width: 100%;\r\n  padding: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\n}\nheader ul li a:hover {\r\n  background-color: #fafafa;\n}\nheader ul li.current {\r\n  font-weight: bold;\n}\nheader ul li.current a {\r\n  border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n  width: 100%;\r\n  height: 100%;\n}\n.contents div {\r\n  /* width: 100%; */\r\n  height: 100%;\r\n  text-align: center;\r\n  vertical-align: middle;\n}\n.contents .sports,\r\n.contents .culture {\r\n  width: 70%;\r\n  display: -webkit-inline-box;\r\n  display: -ms-inline-flexbox;\r\n  display: inline-flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\n}\r\n\r\n/****************************\r\n * About\r\n ****************************/\n.cp_stepflow07 {\r\n\tfont-size: 80%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -ms-flexbox;\r\n\tdisplay: flex;\r\n\tmargin: 0 0 1em;\r\n\tpadding: 0;\n}\n.cp_stepflow07 > li {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: auto;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\ttext-align: center;\r\n\ttext-overflow: ellipsis;\r\n\tcolor: #b0bec5;\r\n\t -ms-flex: 1;\r\n\t-moz-flex: 1;\r\n\t-webkit-box-flex: 1;\r\n\t     flex: 1;\n}\n.cp_stepflow07 > li .bubble::after,\r\n.cp_stepflow07 > li .bubble::before {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tright: 50%;\r\n\tleft: 50%;\r\n\tdisplay: block;\r\n\twidth: 90%;\r\n\theight: 8px;\r\n\tcontent: '';\r\n\t-webkit-transform: translateX(-50%);\r\n\t        transform: translateX(-50%);\r\n\tbackground-color: #b0bec5;\n}\n.cp_stepflow07 > li .bubble + span {\r\n\tdisplay: block;\r\n\tmargin-top: 1em;\n}\n.cp_stepflow07 > li.completed,\r\n.cp_stepflow07 > li.completed .bubble {\r\n\tcolor: #00acc1;\n}\n.cp_stepflow07 > li.completed .bubble,\r\n.cp_stepflow07 > li.completed .bubble::after,\r\n.cp_stepflow07 > li.completed .bubble::before {\r\n\tbackground-color: #4dd0e1;\n}\n.cp_stepflow07 > li.active,\r\n.cp_stepflow07 > li.active .bubble {\r\n\tfont-weight: bold;\r\n\tcolor: #f57c00;\n}\n.cp_stepflow07 > li.active .bubble,\r\n.cp_stepflow07 > li.active .bubble::after,\r\n.cp_stepflow07 > li.active .bubble::before {\r\n\tbackground-color: #fb8c00;\n}\r\n\r\n/****************************\r\n * Hobby\r\n ****************************/\n.btn-brackets {\r\n  width: 110px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.5em 1em;\r\n  text-decoration: none;\r\n  color: #000;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\n}\n.btn-brackets {\r\n  width: 142px;\n}\n.btn-brackets:hover {\r\n  color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n  position: absolute;\r\n  top: 0;\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 100%;\r\n  display: inline-block;\n}\n.btn-brackets:before {\r\n  border-left: solid 1px #ff7f7f;\r\n  border-top: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  left: 0;\n}\n.btn-brackets:after {\r\n  content: \"\";\r\n  border-top: solid 1px #ff7f7f;\r\n  border-right: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  right: 0;\n}\n.box18 {\r\n  margin: 2em 0;\r\n  position: relative;\r\n  padding: 0.25em 1em;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 3px 0 3px 0;\n}\n.box18:before,\r\n.box18:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 50%;\n}\n.box18:after {\r\n  top: -12px;\r\n  left: -12px;\n}\n.box18:before {\r\n  bottom: -12px;\r\n  right: -12px;\n}\n.box18 p {\r\n  margin: 0;\r\n  padding: 0;\n}\r\n\r\n/****************************\r\n * Works\r\n ****************************/\n.cssgrid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  grid-gap: 0.8em;\r\n  border: 1px solid #ddd;\r\n  padding: 0.8em;\r\n  margin: 0 0 2em;\n}\n.cssgrid > div {\r\n  background: #ddd;\r\n  overflow: auto;\r\n  min-width: 0;\r\n  padding: 1em;\n}\r\n", ""]);
 
 
 
@@ -16277,7 +16347,9 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+      _c("div", { staticClass: "contents" }, [
+        _vm._v("\n            This is Zackey's introduction page\n        ")
+      ])
     ])
   ])
 }
@@ -16357,52 +16429,143 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _vm._m(0)
+      _c(
+        "div",
+        { staticClass: "contents" },
+        [
+          _c("h2", [_vm._v("経歴")]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "cp_stepflow07" }, [
+            _c(
+              "li",
+              {
+                class: { active: _vm.active[0], completed: _vm.completed[0] },
+                on: {
+                  mouseenter: function($event) {
+                    return _vm.activate(0)
+                  },
+                  mouseleave: function($event) {
+                    return _vm.deactivate(0)
+                  },
+                  click: function($event) {
+                    return _vm.toggle_completion(0)
+                  }
+                }
+              },
+              [
+                _c("span", { staticClass: "bubble" }),
+                _vm._v(" "),
+                _c("span", [_vm._v("高校")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                class: { active: _vm.active[1], completed: _vm.completed[1] },
+                on: {
+                  mouseenter: function($event) {
+                    return _vm.activate(1)
+                  },
+                  mouseleave: function($event) {
+                    return _vm.deactivate(1)
+                  },
+                  click: function($event) {
+                    return _vm.toggle_completion(1)
+                  }
+                }
+              },
+              [
+                _c("span", { staticClass: "bubble" }),
+                _vm._v(" "),
+                _c("span", [_vm._v("大学")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                class: { active: _vm.active[2], completed: _vm.completed[2] },
+                on: {
+                  mouseenter: function($event) {
+                    return _vm.activate(2)
+                  },
+                  mouseleave: function($event) {
+                    return _vm.deactivate(2)
+                  },
+                  click: function($event) {
+                    return _vm.toggle_completion(2)
+                  }
+                }
+              },
+              [
+                _c("span", { staticClass: "bubble" }),
+                _vm._v(" "),
+                _c("span", [_vm._v("大学院")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                class: { active: _vm.active[3], completed: _vm.completed[3] },
+                on: {
+                  mouseenter: function($event) {
+                    return _vm.activate(3)
+                  },
+                  mouseleave: function($event) {
+                    return _vm.deactivate(3)
+                  },
+                  click: function($event) {
+                    return _vm.toggle_completion(3)
+                  }
+                }
+              },
+              [
+                _c("span", { staticClass: "bubble" }),
+                _vm._v(" "),
+                _c("span", [_vm._v("最初の会社")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                class: { active: _vm.active[4], completed: _vm.completed[4] },
+                on: {
+                  mouseenter: function($event) {
+                    return _vm.activate(4)
+                  },
+                  mouseleave: function($event) {
+                    return _vm.deactivate(4)
+                  },
+                  click: function($event) {
+                    return _vm.toggle_completion(4)
+                  }
+                }
+              },
+              [
+                _c("span", { staticClass: "bubble" }),
+                _vm._v(" "),
+                _c("span", [_vm._v("今の会社")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _vm._l(_vm.content_list, function(content, i) {
+            return _c("div", { key: content }, [
+              _vm.active[i] && !_vm.completed[i]
+                ? _c("p", [_vm._v(_vm._s(content))])
+                : _vm._e()
+            ])
+          })
+        ],
+        2
+      )
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "contents" }, [
-      _c("h2", [_vm._v("経歴")]),
-      _vm._v(" "),
-      _c("ul", { staticClass: "cp_stepflow07" }, [
-        _c("li", { staticClass: "completed" }, [
-          _c("span", { staticClass: "bubble" }),
-          _vm._v(" "),
-          _c("span", [_vm._v("岡山県立玉野高校")])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "completed" }, [
-          _c("span", { staticClass: "bubble" }),
-          _vm._v(" "),
-          _c("span", [_vm._v("岡山大学")])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "active" }, [
-          _c("span", { staticClass: "bubble" }),
-          _vm._v(" "),
-          _c("span", [_vm._v("岡山大学大学院")])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("span", { staticClass: "bubble" }),
-          _vm._v(" "),
-          _c("span", [_vm._v("日本電気株式会社")])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("span", { staticClass: "bubble" }),
-          _vm._v(" "),
-          _c("span", [_vm._v("株式会社ジェニオ")])
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -16540,16 +16703,14 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n                週に一度ほど、大阪市内の体育館で社会人サークルとして活動しています。"
+              "\n        週に一度ほど、大阪市内の体育館で社会人サークルとして活動しています。\n        "
             ),
             _c("br"),
             _vm._v(
-              "\n                最近は代表代理として運営にも携わっています。大変です。"
+              "最近は代表代理として運営にも携わっています。大変です。\n        "
             ),
             _c("br"),
-            _vm._v(
-              "\n                レベルは、市内大会の4部の上位です。\n            "
-            )
+            _vm._v("レベルは、市内大会の4部の上位です。\n      ")
           ]
         ),
         _vm._v(" "),
@@ -16568,16 +16729,14 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n                最近あまりしていませんが、年に２，３回フルマラソンを走ります。"
+              "\n        最近あまりしていませんが、年に２，３回フルマラソンを走ります。\n        "
             ),
             _c("br"),
             _vm._v(
-              "\n                タイムは、せいぜい５時間程度。ベストは４時間２２分。"
+              "タイムは、せいぜい５時間程度。ベストは４時間２２分。\n        "
             ),
             _c("br"),
-            _vm._v(
-              "\n                ダイエットが高じていつの間にかフルまで・・・。\n            "
-            )
+            _vm._v("ダイエットが高じていつの間にかフルまで・・・。\n      ")
           ]
         ),
         _vm._v(" "),
@@ -16596,11 +16755,11 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n                これも最近はあまり。神奈川に住んでいたときは、南アルプス、関東圏の山々を"
+              "\n        これも最近はあまり。神奈川に住んでいたときは、南アルプス、関東圏の山々を\n        "
             ),
             _c("br"),
             _vm._v(
-              "\n                登っていました。冬山挑戦が夢でしたが、今はひっそり。妻と行きたいと思っています。\n            "
+              "登っていました。冬山挑戦が夢でしたが、今はひっそり。妻と行きたいと思っています。\n      "
             )
           ]
         ),
@@ -16620,11 +16779,11 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n                これも前職の高給で買っただけで、あまり。一度武蔵小杉から箱根まで１００ｋｍの移動を"
+              "\n        これも前職の高給で買っただけで、あまり。一度武蔵小杉から箱根まで１００ｋｍの移動を\n        "
             ),
             _c("br"),
             _vm._v(
-              "\n                しましたが、それ以外はせいぜい５，６０ｋｍ程度の距離。小豆島一週もしましたね。\n            "
+              "しましたが、それ以外はせいぜい５，６０ｋｍ程度の距離。小豆島一週もしましたね。\n      "
             )
           ]
         ),
@@ -16644,11 +16803,11 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n                直木賞作品を新しい方から読みつつ、たまに寄り道します。"
+              "\n        直木賞作品を新しい方から読みつつ、たまに寄り道します。\n        "
             ),
             _c("br"),
             _vm._v(
-              "\n                技術書も読みますが、最近はあまり手をつけられていません。\n            "
+              "技術書も読みますが、最近はあまり手をつけられていません。\n      "
             )
           ]
         ),
@@ -16668,11 +16827,11 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n                政治・経済に興味があります。歴史を学ぶのも好きです。"
+              "\n        政治・経済に興味があります。歴史を学ぶのも好きです。\n        "
             ),
             _c("br"),
             _vm._v(
-              "\n                簿記やFPなど、お金にまつわる知識は早めに獲得しておきたいものです。\n            "
+              "簿記やFPなど、お金にまつわる知識は早めに獲得しておきたいものです。\n      "
             )
           ]
         ),
@@ -16692,12 +16851,10 @@ var render = function() {
           },
           [
             _vm._v(
-              "\n                ドラスレが最もお気に入りです。ゴキポも好き。"
+              "\n        ドラスレが最もお気に入りです。ゴキポも好き。\n        "
             ),
             _c("br"),
-            _vm._v(
-              "\n                ワーバスが最強という説もありますが。\n            "
-            )
+            _vm._v("ワーバスが最強という説もありますが。\n      ")
           ]
         )
       ])
@@ -16780,11 +16937,30 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("div", { staticClass: "contents" }, [_vm._v("contents")])
+      _vm._m(0)
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "contents" }, [
+      _c("div", { staticClass: "cssgrid" }, [
+        _c("div", [_vm._v("アイテム1")]),
+        _vm._v(" "),
+        _c("div", [_vm._v("アイテム2")]),
+        _vm._v(" "),
+        _c("div", [_vm._v("アイテム3")]),
+        _vm._v(" "),
+        _c("div", [_vm._v("アイテム4")]),
+        _vm._v(" "),
+        _c("div", [_vm._v("アイテム5")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

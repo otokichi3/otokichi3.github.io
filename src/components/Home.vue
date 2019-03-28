@@ -2,7 +2,9 @@
     <div>
         <article class="test">
             <h1>{{ title }}</h1>
-            <div class="contents">contents</div>
+            <div class="contents">
+                This is Zackey's introduction page
+            </div>
         </article>
     </div>
 </template>
