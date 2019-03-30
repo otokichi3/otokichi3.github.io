@@ -7,6 +7,15 @@ import router from './router/index.js'
 
 Vue.config.productionTip = false
 
+const PropsComp = {
+    props: ['val'],
+    template: '<h1>{{ val }}</h1>',
+}
+
+Vue.component('common-component', {
+    template: '<h2>共通コンポーネント</h2>',
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#header',
@@ -18,6 +27,8 @@ new Vue({
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+       App,
+  },
   template: '<App/>'
 })

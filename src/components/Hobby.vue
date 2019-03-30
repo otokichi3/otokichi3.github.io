@@ -3,7 +3,7 @@
     <article class="test">
       <h1>{{ title }}</h1>
       <div class="contents">
-        <div class="sports">
+        <div>
           <p
             v-for="(topic, i) in topics"
             :key="topic"
@@ -64,16 +64,12 @@ export default {
           ドラスレが最もお気に入りです。ゴキポも好き。
           ワーバスが最強かもしれませんが。
           `,
-
       ]
     };
   },
   methods: {
     show_content(idx) {
-        this.isShow.forEach(function (v, i) {
-            // すべて false にする処理
-            // this.isShow[i] = false
-        });
+        this.isShow = this.isShow.map(show => false)
         this.isShow.splice(idx, 1, true);
     }
   }

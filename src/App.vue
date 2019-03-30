@@ -100,13 +100,6 @@ header ul li.current a {
   vertical-align: middle;
 }
 
-.contents .sports,
-.contents .culture {
-  width: 70%;
-  display: inline-flex;
-  justify-content: space-between;
-}
-
 /****************************
  * About
  ****************************/
@@ -196,17 +189,14 @@ header ul li.current a {
  * Hobby
  ****************************/
 .btn-brackets {
-  width: 110px;
+  width: 100px;
   display: inline-block;
   position: relative;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.7em;
   text-decoration: none;
   color: #000;
   transition: 0.4s;
-}
-
-.btn-brackets {
-  width: 142px;
+  margin: 1vh 1vw;
 }
 
 .btn-brackets:hover {
@@ -237,7 +227,7 @@ header ul li.current a {
 }
 
 .box18 {
-  margin: 2em 0;
+  margin: 2em 30vw;
   position: relative;
   padding: 0.25em 1em;
   border: solid 2px #ffcb8a;
@@ -284,6 +274,9 @@ header ul li.current a {
   overflow: auto;
   min-width: 0;
   padding: 1em;
+}
+.center {
+    text-align: center;
 }
 </style>
 

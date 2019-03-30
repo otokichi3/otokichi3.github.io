@@ -4,7 +4,7 @@
       <h1>{{ title }}</h1>
       <div class="contents">
         <div class="cssgrid">
-          <div>アイテム1</div>
+          <div>CapitaWorld</div>
           <div>アイテム2</div>
           <div>アイテム3</div>
           <div>アイテム4</div>

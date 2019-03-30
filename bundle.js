@@ -527,13 +527,39 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'Home',
     data: function data() {
         return {
-            title: 'Home'
+            title: 'Home',
+            message: 'v-bind:title',
+            noon_msg: 'Good morning visitor',
+            after_noon_msg: 'Good afternoon visitor',
+            name: 'Please enter your name.'
         };
+    },
+
+    computed: {
+        now: function now() {
+            var date = new Date();
+            return date.getHours();
+        }
+    },
+    methods: {
+        reverse_message: function reverse_message() {
+            if (this.now >= 12) {
+                this.after_noon_msg = this.after_noon_msg.split('').reverse().join('');
+            } else {
+                this.noon_msg = this.noon_msg.split('').reverse().join('');
+            }
+        }
     }
 });
 
@@ -578,7 +604,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
       backgrounds: ["高校", "大学", "大学院", "最初の会社", "現在の会社"],
       active: [false, false, false, false, false],
       completed: [false, false, false, false, false],
-      content_list: ["\u5927\u3057\u3066\u52C9\u5F37\u306F\u3057\u3066\u3044\u307E\u305B\u3093\u3067\u3057\u305F\u304C\u3001\u52C9\u5F37\u306F\u51FA\u6765\u307E\u3057\u305F\u3002\u6388\u696D\u3068\u5BBF\u984C\u3092\u771F\u9762\u76EE\u306B\u805E\u3044\u3066\u3044\u305F\u304B\u3089\u3060\u3068\u601D\u3044\u307E\u3059\u3002\n          \u521D\u5FC3\u8005\u306A\u304C\u3089\u30BD\u30D5\u30C8\u30C6\u30CB\u30B9\u90E8\u306B\u5165\u308A\u3001\u524D\u885B\u3092\u5F35\u3063\u3066\u3044\u307E\u3057\u305F\u3002\u4E00\u5FDC\u3001\u770C\u5927\u4F1A\u30D9\u30B9\u30C8\uFF14\u306B\u5165\u308A\u307E\u3057\u305F\u3002\u56E3\u4F53\u3067\u3059\u304C\u3002\n          \u9752\u6625\u306E\u611F\u306F\u3042\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u3057\u3001\u3067\u304D\u308C\u3070\u540C\u7A93\u4F1A\u3059\u3089\u53C2\u52A0\u3057\u305F\u304F\u306A\u3044\u3050\u3089\u3044\u3001\u597D\u304D\u3058\u3083\u306A\u3044\u3067\u3059\u3002", "\u5927\u5B66", "\u5927\u5B66\u9662", "NEC", "GENIO"]
+      content_list: ["\u5927\u3057\u3066\u52C9\u5F37\u306F\u3057\u3066\u3044\u307E\u305B\u3093\u3067\u3057\u305F\u304C\u3001\u52C9\u5F37\u306F\u51FA\u6765\u307E\u3057\u305F\u3002\u6388\u696D\u3068\u5BBF\u984C\u3092\u771F\u9762\u76EE\u306B\u805E\u3044\u3066\u3044\u305F\u304B\u3089\u3060\u3068\u601D\u3044\u307E\u3059\u3002\n          \u521D\u5FC3\u8005\u306A\u304C\u3089\u30BD\u30D5\u30C8\u30C6\u30CB\u30B9\u90E8\u306B\u5165\u308A\u3001\u524D\u885B\u3092\u5F35\u3063\u3066\u3044\u307E\u3057\u305F\u3002\u4E00\u5FDC\u3001\u770C\u5927\u4F1A\u30D9\u30B9\u30C8\uFF14\u306B\u5165\u308A\u307E\u3057\u305F\u3002\u56E3\u4F53\u3067\u3059\u304C\u3002\n          \u9752\u6625\u306E\u611F\u306F\u3042\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u3057\u3001\u3067\u304D\u308C\u3070\u540C\u7A93\u4F1A\u3059\u3089\u53C2\u52A0\u3057\u305F\u304F\u306A\u3044\u3050\u3089\u3044\u3001\u597D\u304D\u3058\u3083\u306A\u3044\u3067\u3059\u3002", "\u4E00\u822C\u306E\u3064\u3082\u308A\u3067\u3057\u305F\u304C\u3001AO\u5165\u8A66\u3067\u5165\u5B66\u3057\u307E\u3057\u305F\u3002\u5272\u3068\u5B9F\u529B\u3088\u308A\u4E0A\u306E\u5927\u5B66\u306B\u5165\u308A\u307E\u3057\u305F\u3002\n        \u5B66\u696D\u306F\u305D\u3053\u305D\u3053\u3001\u3042\u3068\u306F\u30D0\u30C9\u30DF\u30F3\u30C8\u30F3\u30B5\u30FC\u30AF\u30EB\u3068\u30D0\u30A4\u30C8\u3092\u3057\u3066\u3044\u307E\u3057\u305F\u3002\u3059\u3054\u30FC\u304F\u7121\u70BA\u306A\n        \u6642\u9593\u3092\u904E\u3054\u3057\u305F\u306A\u3042\u3001\u3068\u601D\u3044\u307E\u3059\u3002", "\u5B66\u90E8\u751F\u306E\u3068\u304D\u3068\u306F\u6253\u3063\u3066\u5909\u308F\u3063\u3066\u53B3\u3057\u304F\u306A\u308A\u307E\u3057\u305F\u3002\u3067\u3059\u304C\u3001\u6301\u3061\u524D\u306E\u4E0D\u512A\u79C0\u3092\u767A\u63EE\u3057\u3001\n        \u6559\u54E1\u304B\u3089\u306F\u6012\u3089\u308C\u304C\u3061\u3002\u7814\u7A76\u3082\u5927\u3057\u305F\u6210\u679C\u51FA\u305B\u306C\u307E\u307E\u4FEE\u8AD6\u3002\u4FEE\u4E86\u51FA\u6765\u3066\u826F\u304B\u3063\u305F\u3002\n        \u305F\u3060\u3001\u5B9F\u7E3E\u306F\u306A\u304B\u306A\u304B\u826F\u3044\u3002\u7D4C\u6E08\u7523\u696D\u5927\u81E3\u8CDE\u3002", "\u7814\u7A76\u5BA4\u306E\u53B3\u3057\u3055\u304B\u3089\u3001\u793E\u4F1A\u306F\u3082\u3063\u3068\u53B3\u3057\u3044\u3082\u306E\u3068\u601D\u3044\u81E8\u3093\u3060\u305F\u3081\u304B\u3001\n        \u3042\u307E\u308A\u306E\u7DE9\u3055\u306B\u6115\u7136\u3002\u3053\u306E\u7DE9\u3055\u3067\u4ED5\u4E8B\u3092\u3059\u308B\u3068\u8150\u308B\u3001\u3068\u601D\u3044\u5165\u793E\u6642\u306B\u9000\u8077\u3092\u6C7A\u610F\u3002\n        \u6240\u5C5E\u90E8\u7F72\u306E\u4E0A\u53F8\u306F\u512A\u79C0\u306A\u4EBA\u3070\u304B\u308A\u3060\u3063\u305F\u304C\u3001\u3061\u3087\u3046\u3069\u6848\u4EF6\u304C\u305F\u3061\u6D88\u3048\u305F\u306E\u3067\u3001\n        \u305D\u306E\u30BF\u30A4\u30DF\u30F3\u30B0\u3067\u9000\u8077\u3002\uFF12\u5E74\u534A\u3060\u3063\u305F\u3002", "\u73FE\u8077\u3002"]
     };
   },
 
@@ -648,8 +674,8 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
   methods: {
     show_content: function show_content(idx) {
-      this.isShow.forEach(function (v, i) {
-        // this.isShow[i] = false
+      this.isShow = this.isShow.map(function (show) {
+        return false;
       });
       this.isShow.splice(idx, 1, true);
     }
@@ -746,6 +772,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.config.productionTip = false
 
+const PropsComp = {
+    props: ['val'],
+    template: '<h1>{{ val }}</h1>',
+}
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('common-component', {
+    template: '<h2>共通コンポーネント</h2>',
+})
+
 /* eslint-disable no-new */
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#header',
@@ -757,7 +792,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app',
   router: __WEBPACK_IMPORTED_MODULE_3__router_index_js__["a" /* default */],
-  components: { App: __WEBPACK_IMPORTED_MODULE_2__App_vue__["a" /* default */] },
+  components: {
+       App: __WEBPACK_IMPORTED_MODULE_2__App_vue__["a" /* default */],
+  },
   template: '<App/>'
 })
 
@@ -13083,13 +13120,13 @@ var content = __webpack_require__(20);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(22)("5be4cc20", content, false, {});
+var update = __webpack_require__(22)("650c99b1", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
-     var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+   module.hot.accept("!!../node_modules/css-loader/dist/cjs.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../node_modules/css-loader/dist/cjs.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ba5bd90\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -13103,96 +13140,101 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(21)(false);
-// imports
+// Module
+exports.push([module.i, "\n#header {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100%;\n}\nh1, .contents h2 { text-align: center;\n}\nbody {\r\n  margin: 0;\r\n  background-color: #dedede;\r\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n  background-size: 10px 10px;\r\n  width: 100vw;\r\n  height: 100vh;\n}\nheader {\r\n  top: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n  border-bottom: 1px solid #ccc;\r\n  background: #fff;\r\n  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n  display: table;\r\n  margin: 0 auto;\r\n  padding: 0;\r\n  width: 100%;\r\n  text-align: center;\n}\nheader ul li {\r\n  display: table-cell;\r\n  min-width: 50px;\r\n  border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n  border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n  display: block;\r\n  width: 100%;\r\n  padding: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\n}\nheader ul li a:hover {\r\n  background-color: #fafafa;\n}\nheader ul li.current {\r\n  font-weight: bold;\n}\nheader ul li.current a {\r\n  border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n  width: 100%;\r\n  height: 100%;\n}\n.contents div {\r\n  /* width: 100%; */\r\n  height: 100%;\r\n  text-align: center;\r\n  vertical-align: middle;\n}\r\n\r\n/****************************\r\n * About\r\n ****************************/\n.cp_stepflow07 {\r\n\tfont-size: 80%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -ms-flexbox;\r\n\tdisplay: flex;\r\n\tmargin: 0 0 1em;\r\n\tpadding: 0;\n}\n.cp_stepflow07 > li {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: auto;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\ttext-align: center;\r\n\ttext-overflow: ellipsis;\r\n\tcolor: #b0bec5;\r\n\t -ms-flex: 1;\r\n\t-moz-flex: 1;\r\n\t-webkit-box-flex: 1;\r\n\t     flex: 1;\n}\n.cp_stepflow07 > li .bubble::after,\r\n.cp_stepflow07 > li .bubble::before {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tright: 50%;\r\n\tleft: 50%;\r\n\tdisplay: block;\r\n\twidth: 90%;\r\n\theight: 8px;\r\n\tcontent: '';\r\n\t-webkit-transform: translateX(-50%);\r\n\t        transform: translateX(-50%);\r\n\tbackground-color: #b0bec5;\n}\n.cp_stepflow07 > li .bubble + span {\r\n\tdisplay: block;\r\n\tmargin-top: 1em;\n}\n.cp_stepflow07 > li.completed,\r\n.cp_stepflow07 > li.completed .bubble {\r\n\tcolor: #00acc1;\n}\n.cp_stepflow07 > li.completed .bubble,\r\n.cp_stepflow07 > li.completed .bubble::after,\r\n.cp_stepflow07 > li.completed .bubble::before {\r\n\tbackground-color: #4dd0e1;\n}\n.cp_stepflow07 > li.active,\r\n.cp_stepflow07 > li.active .bubble {\r\n\tfont-weight: bold;\r\n\tcolor: #f57c00;\n}\n.cp_stepflow07 > li.active .bubble,\r\n.cp_stepflow07 > li.active .bubble::after,\r\n.cp_stepflow07 > li.active .bubble::before {\r\n\tbackground-color: #fb8c00;\n}\n.desc {\r\n    margin:2em 15vw;\r\n    position: relative;\r\n    padding: 0.5em 1.5em;\r\n    border-top: solid 2px black;\r\n    border-bottom: solid 2px black;\n}\n.desc:before, .desc:after{\r\n    content: '';\r\n    position: absolute;\r\n    top: -10px;\r\n    width: 2px;\r\n    height: calc(100% + 20px);\r\n    background-color: black;\n}\n.desc:before {left: 10px;\n}\n.desc:after {right: 10px;\n}\n.desc p {\r\n    margin: 0; \r\n    padding: 0;\n}\r\n\r\n/****************************\r\n * Hobby\r\n ****************************/\n.btn-brackets {\r\n  width: 100px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.5em 0.7em;\r\n  text-decoration: none;\r\n  color: #000;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\r\n  margin: 1vh 1vw;\n}\n.btn-brackets:hover {\r\n  color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n  position: absolute;\r\n  top: 0;\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 100%;\r\n  display: inline-block;\n}\n.btn-brackets:before {\r\n  border-left: solid 1px #ff7f7f;\r\n  border-top: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  left: 0;\n}\n.btn-brackets:after {\r\n  content: \"\";\r\n  border-top: solid 1px #ff7f7f;\r\n  border-right: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  right: 0;\n}\n.box18 {\r\n  margin: 2em 30vw;\r\n  position: relative;\r\n  padding: 0.25em 1em;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 3px 0 3px 0;\n}\n.box18:before,\r\n.box18:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 50%;\n}\n.box18:after {\r\n  top: -12px;\r\n  left: -12px;\n}\n.box18:before {\r\n  bottom: -12px;\r\n  right: -12px;\n}\n.box18 p {\r\n  margin: 0;\r\n  padding: 0;\n}\r\n\r\n/****************************\r\n * Works\r\n ****************************/\n.cssgrid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  grid-gap: 0.8em;\r\n  border: 1px solid #ddd;\r\n  padding: 0.8em;\r\n  margin: 0 0 2em;\n}\n.cssgrid > div {\r\n  background: #ddd;\r\n  overflow: auto;\r\n  min-width: 0;\r\n  padding: 1em;\n}\n.center {\r\n    text-align: center;\n}\r\n", ""]);
 
-
-// module
-exports.push([module.i, "\n#header {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"\\6E38\\30B4\\30B7\\30C3\\30AF   Medium\", \"\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53\",\r\n    \"Yu Gothic Medium\", YuGothic, \"\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"\\30E1\\30A4\\30EA\\30AA\", Meiryo, \"\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"\\6E38\\30B4\\30B7\\30C3\\30AF   Medium\", \"\\6E38\\30B4\\30B7\\30C3\\30AF\\4F53\",\r\n    \"Yu Gothic Medium\", YuGothic, \"\\30D2\\30E9\\30AE\\30CE\\89D2\\30B4   ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"\\30E1\\30A4\\30EA\\30AA\", Meiryo, \"\\FF2D\\FF33   \\FF30\\30B4\\30B7\\30C3\\30AF\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100%;\n}\nh1, .contents h2 { text-align: center;\n}\nbody {\r\n  margin: 0;\r\n  background-color: #dedede;\r\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n  background-size: 10px 10px;\r\n  width: 100vw;\r\n  height: 100vh;\n}\nheader {\r\n  top: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n  border-bottom: 1px solid #ccc;\r\n  background: #fff;\r\n  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n  display: table;\r\n  margin: 0 auto;\r\n  padding: 0;\r\n  width: 100%;\r\n  text-align: center;\n}\nheader ul li {\r\n  display: table-cell;\r\n  min-width: 50px;\r\n  border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n  border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n  display: block;\r\n  width: 100%;\r\n  padding: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\n}\nheader ul li a:hover {\r\n  background-color: #fafafa;\n}\nheader ul li.current {\r\n  font-weight: bold;\n}\nheader ul li.current a {\r\n  border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n  width: 100%;\r\n  height: 100%;\n}\n.contents div {\r\n  /* width: 100%; */\r\n  height: 100%;\r\n  text-align: center;\r\n  vertical-align: middle;\n}\n.contents .sports,\r\n.contents .culture {\r\n  width: 70%;\r\n  display: -webkit-inline-box;\r\n  display: -ms-inline-flexbox;\r\n  display: inline-flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\n}\r\n\r\n/****************************\r\n * About\r\n ****************************/\n.cp_stepflow07 {\r\n\tfont-size: 80%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -ms-flexbox;\r\n\tdisplay: flex;\r\n\tmargin: 0 0 1em;\r\n\tpadding: 0;\n}\n.cp_stepflow07 > li {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: auto;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\ttext-align: center;\r\n\ttext-overflow: ellipsis;\r\n\tcolor: #b0bec5;\r\n\t -ms-flex: 1;\r\n\t-moz-flex: 1;\r\n\t-webkit-box-flex: 1;\r\n\t     flex: 1;\n}\n.cp_stepflow07 > li .bubble::after,\r\n.cp_stepflow07 > li .bubble::before {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tright: 50%;\r\n\tleft: 50%;\r\n\tdisplay: block;\r\n\twidth: 90%;\r\n\theight: 8px;\r\n\tcontent: '';\r\n\t-webkit-transform: translateX(-50%);\r\n\t        transform: translateX(-50%);\r\n\tbackground-color: #b0bec5;\n}\n.cp_stepflow07 > li .bubble + span {\r\n\tdisplay: block;\r\n\tmargin-top: 1em;\n}\n.cp_stepflow07 > li.completed,\r\n.cp_stepflow07 > li.completed .bubble {\r\n\tcolor: #00acc1;\n}\n.cp_stepflow07 > li.completed .bubble,\r\n.cp_stepflow07 > li.completed .bubble::after,\r\n.cp_stepflow07 > li.completed .bubble::before {\r\n\tbackground-color: #4dd0e1;\n}\n.cp_stepflow07 > li.active,\r\n.cp_stepflow07 > li.active .bubble {\r\n\tfont-weight: bold;\r\n\tcolor: #f57c00;\n}\n.cp_stepflow07 > li.active .bubble,\r\n.cp_stepflow07 > li.active .bubble::after,\r\n.cp_stepflow07 > li.active .bubble::before {\r\n\tbackground-color: #fb8c00;\n}\n.desc {\r\n    margin:2em 15vw;\r\n    position: relative;\r\n    padding: 0.5em 1.5em;\r\n    border-top: solid 2px black;\r\n    border-bottom: solid 2px black;\n}\n.desc:before, .desc:after{\r\n    content: '';\r\n    position: absolute;\r\n    top: -10px;\r\n    width: 2px;\r\n    height: calc(100% + 20px);\r\n    background-color: black;\n}\n.desc:before {left: 10px;\n}\n.desc:after {right: 10px;\n}\n.desc p {\r\n    margin: 0; \r\n    padding: 0;\n}\r\n\r\n/****************************\r\n * Hobby\r\n ****************************/\n.btn-brackets {\r\n  width: 110px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.5em 1em;\r\n  text-decoration: none;\r\n  color: #000;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\n}\n.btn-brackets {\r\n  width: 142px;\n}\n.btn-brackets:hover {\r\n  color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n  position: absolute;\r\n  top: 0;\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 100%;\r\n  display: inline-block;\n}\n.btn-brackets:before {\r\n  border-left: solid 1px #ff7f7f;\r\n  border-top: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  left: 0;\n}\n.btn-brackets:after {\r\n  content: \"\";\r\n  border-top: solid 1px #ff7f7f;\r\n  border-right: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  right: 0;\n}\n.box18 {\r\n  margin: 2em 0;\r\n  position: relative;\r\n  padding: 0.25em 1em;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 3px 0 3px 0;\n}\n.box18:before,\r\n.box18:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 50%;\n}\n.box18:after {\r\n  top: -12px;\r\n  left: -12px;\n}\n.box18:before {\r\n  bottom: -12px;\r\n  right: -12px;\n}\n.box18 p {\r\n  margin: 0;\r\n  padding: 0;\n}\r\n\r\n/****************************\r\n * Works\r\n ****************************/\n.cssgrid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  grid-gap: 0.8em;\r\n  border: 1px solid #ddd;\r\n  padding: 0.8em;\r\n  margin: 0 0 2em;\n}\n.cssgrid > div {\r\n  background: #ddd;\r\n  overflow: auto;\r\n  min-width: 0;\r\n  padding: 1em;\n}\r\n", ""]);
-
-// exports
 
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 // css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
 
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
 
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
 };
 
 function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
+  var content = item[1] || '';
+  var cssMapping = item[3];
 
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
+  if (!cssMapping) {
+    return content;
+  }
 
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
 
-	return [content].join('\n');
-}
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
 
-// Adapted from convert-source-map (MIT)
+
 function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
 }
-
 
 /***/ }),
 /* 22 */
@@ -16222,9 +16264,53 @@ var render = function() {
     _c("article", { staticClass: "test" }, [
       _c("h1", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("div", { staticClass: "contents" }, [
-        _vm._v("\n            This is Zackey's introduction page\n        ")
-      ])
+      _c(
+        "div",
+        { staticClass: "contents" },
+        [
+          _vm.now >= 12
+            ? _c(
+                "h2",
+                {
+                  attrs: { title: _vm.message },
+                  on: { click: _vm.reverse_message }
+                },
+                [_vm._v(_vm._s(_vm.after_noon_msg))]
+              )
+            : _c("h2", { on: { click: _vm.reverse_message } }, [
+                _vm._v(_vm._s(_vm.noon_msg))
+              ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "center" }, [
+            _c("p", { staticClass: "name_model" }, [
+              _vm._v("You input: " + _vm._s(_vm.name))
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.name,
+                  expression: "name"
+                }
+              ],
+              domProps: { value: _vm.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.name = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("common-component")
+        ],
+        1
+      )
     ])
   ])
 }
@@ -16436,7 +16522,6 @@ var render = function() {
         [
           _c(
             "div",
-            { staticClass: "sports" },
             _vm._l(_vm.topics, function(topic, i) {
               return _c(
                 "p",
@@ -16566,7 +16651,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "contents" }, [
       _c("div", { staticClass: "cssgrid" }, [
-        _c("div", [_vm._v("アイテム1")]),
+        _c("div", [_vm._v("CapitaWorld")]),
         _vm._v(" "),
         _c("div", [_vm._v("アイテム2")]),
         _vm._v(" "),
