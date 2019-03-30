@@ -533,34 +533,41 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'Home',
-    data: function data() {
-        return {
-            title: 'Home',
-            message: 'v-bind:title',
-            noon_msg: 'Good morning visitor',
-            after_noon_msg: 'Good afternoon visitor',
-            name: 'Please enter your name.'
-        };
-    },
+  name: "Home",
+  data: function data() {
+    return {
+      title: "Home",
+      message: "v-bind:title",
+      noon_msg: "Good morning visitor",
+      after_noon_msg: "Good afternoon visitor",
+      name: "Please enter your name."
+    };
+  },
 
-    computed: {
-        now: function now() {
-            var date = new Date();
-            return date.getHours();
-        }
-    },
-    methods: {
-        reverse_message: function reverse_message() {
-            if (this.now >= 12) {
-                this.after_noon_msg = this.after_noon_msg.split('').reverse().join('');
-            } else {
-                this.noon_msg = this.noon_msg.split('').reverse().join('');
-            }
-        }
+  computed: {
+    now: function now() {
+      var date = new Date();
+      return date.getHours();
     }
+  },
+  methods: {
+    reverse_message: function reverse_message() {
+      if (this.now >= 12) {
+        this.after_noon_msg = this.after_noon_msg.split("").reverse().join("");
+      } else {
+        this.noon_msg = this.noon_msg.split("").reverse().join("");
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -604,7 +611,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
       backgrounds: ["高校", "大学", "大学院", "最初の会社", "現在の会社"],
       active: [false, false, false, false, false],
       completed: [false, false, false, false, false],
-      content_list: ["\u5927\u3057\u3066\u52C9\u5F37\u306F\u3057\u3066\u3044\u307E\u305B\u3093\u3067\u3057\u305F\u304C\u3001\u52C9\u5F37\u306F\u51FA\u6765\u307E\u3057\u305F\u3002\u6388\u696D\u3068\u5BBF\u984C\u3092\u771F\u9762\u76EE\u306B\u805E\u3044\u3066\u3044\u305F\u304B\u3089\u3060\u3068\u601D\u3044\u307E\u3059\u3002\n          \u521D\u5FC3\u8005\u306A\u304C\u3089\u30BD\u30D5\u30C8\u30C6\u30CB\u30B9\u90E8\u306B\u5165\u308A\u3001\u524D\u885B\u3092\u5F35\u3063\u3066\u3044\u307E\u3057\u305F\u3002\u4E00\u5FDC\u3001\u770C\u5927\u4F1A\u30D9\u30B9\u30C8\uFF14\u306B\u5165\u308A\u307E\u3057\u305F\u3002\u56E3\u4F53\u3067\u3059\u304C\u3002\n          \u9752\u6625\u306E\u611F\u306F\u3042\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u3057\u3001\u3067\u304D\u308C\u3070\u540C\u7A93\u4F1A\u3059\u3089\u53C2\u52A0\u3057\u305F\u304F\u306A\u3044\u3050\u3089\u3044\u3001\u597D\u304D\u3058\u3083\u306A\u3044\u3067\u3059\u3002", "\u4E00\u822C\u306E\u3064\u3082\u308A\u3067\u3057\u305F\u304C\u3001AO\u5165\u8A66\u3067\u5165\u5B66\u3057\u307E\u3057\u305F\u3002\u5272\u3068\u5B9F\u529B\u3088\u308A\u4E0A\u306E\u5927\u5B66\u306B\u5165\u308A\u307E\u3057\u305F\u3002\n        \u5B66\u696D\u306F\u305D\u3053\u305D\u3053\u3001\u3042\u3068\u306F\u30D0\u30C9\u30DF\u30F3\u30C8\u30F3\u30B5\u30FC\u30AF\u30EB\u3068\u30D0\u30A4\u30C8\u3092\u3057\u3066\u3044\u307E\u3057\u305F\u3002\u3059\u3054\u30FC\u304F\u7121\u70BA\u306A\n        \u6642\u9593\u3092\u904E\u3054\u3057\u305F\u306A\u3042\u3001\u3068\u601D\u3044\u307E\u3059\u3002", "\u5B66\u90E8\u751F\u306E\u3068\u304D\u3068\u306F\u6253\u3063\u3066\u5909\u308F\u3063\u3066\u53B3\u3057\u304F\u306A\u308A\u307E\u3057\u305F\u3002\u3067\u3059\u304C\u3001\u6301\u3061\u524D\u306E\u4E0D\u512A\u79C0\u3092\u767A\u63EE\u3057\u3001\n        \u6559\u54E1\u304B\u3089\u306F\u6012\u3089\u308C\u304C\u3061\u3002\u7814\u7A76\u3082\u5927\u3057\u305F\u6210\u679C\u51FA\u305B\u306C\u307E\u307E\u4FEE\u8AD6\u3002\u4FEE\u4E86\u51FA\u6765\u3066\u826F\u304B\u3063\u305F\u3002\n        \u305F\u3060\u3001\u5B9F\u7E3E\u306F\u306A\u304B\u306A\u304B\u826F\u3044\u3002\u7D4C\u6E08\u7523\u696D\u5927\u81E3\u8CDE\u3002", "\u7814\u7A76\u5BA4\u306E\u53B3\u3057\u3055\u304B\u3089\u3001\u793E\u4F1A\u306F\u3082\u3063\u3068\u53B3\u3057\u3044\u3082\u306E\u3068\u601D\u3044\u81E8\u3093\u3060\u305F\u3081\u304B\u3001\n        \u3042\u307E\u308A\u306E\u7DE9\u3055\u306B\u6115\u7136\u3002\u3053\u306E\u7DE9\u3055\u3067\u4ED5\u4E8B\u3092\u3059\u308B\u3068\u8150\u308B\u3001\u3068\u601D\u3044\u5165\u793E\u6642\u306B\u9000\u8077\u3092\u6C7A\u610F\u3002\n        \u6240\u5C5E\u90E8\u7F72\u306E\u4E0A\u53F8\u306F\u512A\u79C0\u306A\u4EBA\u3070\u304B\u308A\u3060\u3063\u305F\u304C\u3001\u3061\u3087\u3046\u3069\u6848\u4EF6\u304C\u305F\u3061\u6D88\u3048\u305F\u306E\u3067\u3001\n        \u305D\u306E\u30BF\u30A4\u30DF\u30F3\u30B0\u3067\u9000\u8077\u3002\uFF12\u5E74\u534A\u3060\u3063\u305F\u3002", "\u73FE\u8077\u3002"]
+      content_list: ["\n          \u666E\u901A\u79D1\u306B\u9032\u5B66\u3002\u5B66\u696D\u306F\u305D\u308C\u306A\u308A\u3067\u3001\u90E8\u6D3B\u3082\u305D\u308C\u306A\u308A\u3002\u9032\u5B66\u6821\u3067\u306F\u306A\u304B\u3063\u305F\u304C\u3001\n          \u7121\u4E8B\u5CA1\u5C71\u5927\u5B66\u306B\u5165\u5B66\u3057\u305F\u3002\u6240\u5C5E\u3057\u3066\u3044\u305F\u8EDF\u5F0F\u30C6\u30CB\u30B9\u90E8\u3067\u306F\u521D\u5FC3\u8005\u59CB\u3081\u306A\u304C\u3089\u3001\n          \u526F\u30AD\u30E3\u30D7\u30C6\u30F3\u306E\u524D\u885B\u3092\u52D9\u3081\u3001\u770C\u5927\u4F1A\u306E\u56E3\u4F53\u6226\u30D9\u30B9\u30C8\uFF18\u306B\u8CA2\u732E\u3002\n        ", "\n          \u60C5\u5831\u5DE5\u5B66\u3092\u5C02\u653B\u3002\u30D0\u30C9\u30DF\u30F3\u30C8\u30F3\u30B5\u30FC\u30AF\u30EB\u306B\u6240\u5C5E\u3057\u7CBE\u3092\u51FA\u3059\u3002OS \u3068\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u3092\n          \u7814\u7A76\u3059\u308B\u7814\u7A76\u5BA4\u306B\u6240\u5C5E\u3057\u3001\uFF14\u5E74\u751F\u304B\u3089\u306F\u30CF\u30FC\u30C9\u306A\u6BCE\u65E5\u3092\u904E\u3054\u3059\u3002\n        ", "\n          \u540C\u5927\u5B66\u9662\u306B\u9032\u5B66\u3057\u3001\u96FB\u5B50\u60C5\u5831\u30B7\u30B9\u30C6\u30E0\u5DE5\u5B66\u3092\u5C02\u653B\u3002\u7814\u7A76\u6F2C\u3051\u306E\u6BCE\u65E5\u3002\u5728\u5B66\u4E2D\u306B\n          \u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u306E\u5927\u4F1A\u306B\u51FA\u5834\u3057\u3001\u512A\u52DD\u3002\u7D4C\u6E08\u7523\u696D\u5927\u81E3\u8CDE\u3092\u7372\u5F97\u3059\u308B\u3002\n          \u307E\u305F\u3001\u5B66\u4F1A\u3067\u306E\u53D7\u8CDE\u3001\u56FD\u969B\u4F1A\u8B70\u3067\u306E\u767A\u8868\u306A\u3069\u3001\u591A\u304F\u306E\u7D4C\u9A13\u3092\u7A4D\u3093\u3060\u3002\n        ", "\n          \u65E5\u672C\u96FB\u6C17\u682A\u5F0F\u4F1A\u793E\u306B SE \u3068\u3057\u3066\u5165\u793E\u3002\u30B3\u30F3\u30D3\u30CB\u5411\u3051\u5E97\u8217\u30B7\u30B9\u30C6\u30E0\u958B\u767A\u306B\u5F93\u4E8B\u3059\u308B\u3002\n          \u3057\u304B\u3057\u3001\u5927\u4F01\u696D\u3067\u306F\u8996\u5EA7\u3092\u9AD8\u304F\u3059\u308B\u307E\u3067\u306B\u6642\u9593\u304C\u304B\u304B\u308A\u3059\u304E\u308B\u3068\u611F\u3058\u305F\u305F\u3081\u3001\u8EE2\u8077\u3092\u6C7A\u610F\u3002\n          \uFF12\u5E74\u534A\u306E\u52E4\u52D9\u3092\u7D4C\u3066\u9000\u8077\u3002\n        ", "\n          \u73FE\u8077\u3067\u3042\u308B\u682A\u5F0F\u4F1A\u793E\u30B8\u30A7\u30CB\u30AA\u306B PG \u3068\u3057\u3066\u5165\u793E\u3002\u4E2D\u53E4\u8ECA\u8F38\u51FA\u8CA9\u58F2\u696D\u8005\u5411\u3051\u30B7\u30B9\u30C6\u30E0\u306E\u958B\u767A\u3001\n          \u74B0\u5883\u4E8B\u696D\u8005\u5411\u3051\u306E\u30B7\u30B9\u30C6\u30E0\u5237\u65B0\u306B\u643A\u308F\u308B\u3002\u5F8C\u8005\u306F SE \u3067\u3001\u8981\u4EF6\u5B9A\u7FA9\u304B\u3089\u53C2\u753B\u3057\u3001\n          \u30E1\u30F3\u30D0\u30FC\uFF12\u4EBA\u306E\u7BA1\u7406\u3082\u884C\u3063\u3066\u3044\u308B\u3002\n        "]
     };
   },
 
@@ -654,11 +661,13 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      title: "Hobby",
       topics: ["バドミントン", "ランニング", "登山", "サイクリング", "読書", "勉強", "ボードゲーム"],
       isShow: [false, false, false, false, false, false, false],
       isBadminton: false,
@@ -744,12 +753,12 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'Lang',
-    data: function data() {
-        return {
-            title: 'Lang'
-        };
-    }
+  name: "Lang",
+  data: function data() {
+    return {
+      title: "Lang"
+    };
+  }
 });
 
 /***/ }),
@@ -772,13 +781,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.config.productionTip = false
 
-const PropsComp = {
-    props: ['val'],
-    template: '<h1>{{ val }}</h1>',
-}
-
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('common-component', {
-    template: '<h2>共通コンポーネント</h2>',
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('intro-topic', {
+    props: ['topic'],
+    template: '<h1>{{ topic }}</h1>',
 })
 
 /* eslint-disable no-new */
@@ -13141,7 +13146,7 @@ if(false) {
 
 exports = module.exports = __webpack_require__(21)(false);
 // Module
-exports.push([module.i, "\n#header {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100%;\n}\nh1, .contents h2 { text-align: center;\n}\nbody {\r\n  margin: 0;\r\n  background-color: #dedede;\r\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n  background-size: 10px 10px;\r\n  width: 100vw;\r\n  height: 100vh;\n}\nheader {\r\n  top: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n  border-bottom: 1px solid #ccc;\r\n  background: #fff;\r\n  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n  display: table;\r\n  margin: 0 auto;\r\n  padding: 0;\r\n  width: 100%;\r\n  text-align: center;\n}\nheader ul li {\r\n  display: table-cell;\r\n  min-width: 50px;\r\n  border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n  border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n  display: block;\r\n  width: 100%;\r\n  padding: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\n}\nheader ul li a:hover {\r\n  background-color: #fafafa;\n}\nheader ul li.current {\r\n  font-weight: bold;\n}\nheader ul li.current a {\r\n  border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n  width: 100%;\r\n  height: 100%;\n}\n.contents div {\r\n  /* width: 100%; */\r\n  height: 100%;\r\n  text-align: center;\r\n  vertical-align: middle;\n}\r\n\r\n/****************************\r\n * About\r\n ****************************/\n.cp_stepflow07 {\r\n\tfont-size: 80%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -ms-flexbox;\r\n\tdisplay: flex;\r\n\tmargin: 0 0 1em;\r\n\tpadding: 0;\n}\n.cp_stepflow07 > li {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: auto;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\ttext-align: center;\r\n\ttext-overflow: ellipsis;\r\n\tcolor: #b0bec5;\r\n\t -ms-flex: 1;\r\n\t-moz-flex: 1;\r\n\t-webkit-box-flex: 1;\r\n\t     flex: 1;\n}\n.cp_stepflow07 > li .bubble::after,\r\n.cp_stepflow07 > li .bubble::before {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tright: 50%;\r\n\tleft: 50%;\r\n\tdisplay: block;\r\n\twidth: 90%;\r\n\theight: 8px;\r\n\tcontent: '';\r\n\t-webkit-transform: translateX(-50%);\r\n\t        transform: translateX(-50%);\r\n\tbackground-color: #b0bec5;\n}\n.cp_stepflow07 > li .bubble + span {\r\n\tdisplay: block;\r\n\tmargin-top: 1em;\n}\n.cp_stepflow07 > li.completed,\r\n.cp_stepflow07 > li.completed .bubble {\r\n\tcolor: #00acc1;\n}\n.cp_stepflow07 > li.completed .bubble,\r\n.cp_stepflow07 > li.completed .bubble::after,\r\n.cp_stepflow07 > li.completed .bubble::before {\r\n\tbackground-color: #4dd0e1;\n}\n.cp_stepflow07 > li.active,\r\n.cp_stepflow07 > li.active .bubble {\r\n\tfont-weight: bold;\r\n\tcolor: #f57c00;\n}\n.cp_stepflow07 > li.active .bubble,\r\n.cp_stepflow07 > li.active .bubble::after,\r\n.cp_stepflow07 > li.active .bubble::before {\r\n\tbackground-color: #fb8c00;\n}\n.desc {\r\n    margin:2em 15vw;\r\n    position: relative;\r\n    padding: 0.5em 1.5em;\r\n    border-top: solid 2px black;\r\n    border-bottom: solid 2px black;\n}\n.desc:before, .desc:after{\r\n    content: '';\r\n    position: absolute;\r\n    top: -10px;\r\n    width: 2px;\r\n    height: calc(100% + 20px);\r\n    background-color: black;\n}\n.desc:before {left: 10px;\n}\n.desc:after {right: 10px;\n}\n.desc p {\r\n    margin: 0; \r\n    padding: 0;\n}\r\n\r\n/****************************\r\n * Hobby\r\n ****************************/\n.btn-brackets {\r\n  width: 100px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.5em 0.7em;\r\n  text-decoration: none;\r\n  color: #000;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\r\n  margin: 1vh 1vw;\n}\n.btn-brackets:hover {\r\n  color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n  position: absolute;\r\n  top: 0;\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 100%;\r\n  display: inline-block;\n}\n.btn-brackets:before {\r\n  border-left: solid 1px #ff7f7f;\r\n  border-top: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  left: 0;\n}\n.btn-brackets:after {\r\n  content: \"\";\r\n  border-top: solid 1px #ff7f7f;\r\n  border-right: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  right: 0;\n}\n.box18 {\r\n  margin: 2em 30vw;\r\n  position: relative;\r\n  padding: 0.25em 1em;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 3px 0 3px 0;\n}\n.box18:before,\r\n.box18:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 50%;\n}\n.box18:after {\r\n  top: -12px;\r\n  left: -12px;\n}\n.box18:before {\r\n  bottom: -12px;\r\n  right: -12px;\n}\n.box18 p {\r\n  margin: 0;\r\n  padding: 0;\n}\r\n\r\n/****************************\r\n * Works\r\n ****************************/\n.cssgrid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  grid-gap: 0.8em;\r\n  border: 1px solid #ddd;\r\n  padding: 0.8em;\r\n  margin: 0 0 2em;\n}\n.cssgrid > div {\r\n  background: #ddd;\r\n  overflow: auto;\r\n  min-width: 0;\r\n  padding: 1em;\n}\n.center {\r\n    text-align: center;\n}\r\n", ""]);
+exports.push([module.i, "\n#header {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n#app {\r\n  font-family: \"Lato\", \"Noto Sans JP\", \"游ゴシック Medium\", \"游ゴシック体\",\r\n    \"Yu Gothic Medium\", YuGothic, \"ヒラギノ角ゴ ProN\",\r\n    \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\",\r\n    \"MS PGothic\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 100%;\n}\nh1, .contents h2 { text-align: center;\n}\nbody {\r\n  margin: 0;\r\n  background-color: #dedede;\r\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));\r\n  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);\r\n  background-size: 10px 10px;\r\n  width: 100vw;\r\n  height: 100vh;\n}\nheader {\r\n  top: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n  border-bottom: 1px solid #ccc;\r\n  background: #fff;\r\n  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);\n}\nheader ul {\r\n  display: table;\r\n  margin: 0 auto;\r\n  padding: 0;\r\n  width: 100%;\r\n  text-align: center;\n}\nheader ul li {\r\n  display: table-cell;\r\n  min-width: 50px;\r\n  border-right: 1px solid #ccc;\n}\nheader ul li:first-child {\r\n  border-left: 1px solid #ccc;\n}\nheader ul li a {\r\n  display: block;\r\n  width: 100%;\r\n  padding: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\n}\nheader ul li a:hover {\r\n  background-color: #fafafa;\n}\nheader ul li.current {\r\n  font-weight: bold;\n}\nheader ul li.current a {\r\n  border-bottom: 1px solid #f2f2f2;\n}\n.contents {\r\n  width: 100%;\r\n  height: 100%;\n}\n.contents div {\r\n  /* width: 100%; */\r\n  height: 100%;\r\n  text-align: center;\r\n  vertical-align: middle;\n}\r\n\r\n/****************************\r\n * About\r\n ****************************/\n.cp_stepflow07 {\r\n\tfont-size: 80%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -ms-flexbox;\r\n\tdisplay: flex;\r\n\tmargin: 0 0 1em;\r\n\tpadding: 0;\n}\n.cp_stepflow07 > li {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: auto;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\ttext-align: center;\r\n\ttext-overflow: ellipsis;\r\n\tcolor: #b0bec5;\r\n\t -ms-flex: 1;\r\n\t-moz-flex: 1;\r\n\t-webkit-box-flex: 1;\r\n\t     flex: 1;\n}\n.cp_stepflow07 > li .bubble::after,\r\n.cp_stepflow07 > li .bubble::before {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tright: 50%;\r\n\tleft: 50%;\r\n\tdisplay: block;\r\n\twidth: 90%;\r\n\theight: 8px;\r\n\tcontent: '';\r\n\t-webkit-transform: translateX(-50%);\r\n\t        transform: translateX(-50%);\r\n\tbackground-color: #b0bec5;\n}\n.cp_stepflow07 > li .bubble + span {\r\n\tdisplay: block;\r\n\tmargin-top: 1em;\n}\n.cp_stepflow07 > li.completed,\r\n.cp_stepflow07 > li.completed .bubble {\r\n\tcolor: #00acc1;\n}\n.cp_stepflow07 > li.completed .bubble,\r\n.cp_stepflow07 > li.completed .bubble::after,\r\n.cp_stepflow07 > li.completed .bubble::before {\r\n\tbackground-color: #4dd0e1;\n}\n.cp_stepflow07 > li.active,\r\n.cp_stepflow07 > li.active .bubble {\r\n\tfont-weight: bold;\r\n\tcolor: #f57c00;\n}\n.cp_stepflow07 > li.active .bubble,\r\n.cp_stepflow07 > li.active .bubble::after,\r\n.cp_stepflow07 > li.active .bubble::before {\r\n\tbackground-color: #fb8c00;\n}\n.desc {\r\n    margin:2em 5vw;\r\n    position: relative;\r\n    padding: 0.5em 1.5em;\r\n    border-top: solid 2px black;\r\n    border-bottom: solid 2px black;\n}\n.desc:before, .desc:after{\r\n    content: '';\r\n    position: absolute;\r\n    top: -10px;\r\n    width: 2px;\r\n    height: calc(100% + 20px);\r\n    background-color: black;\n}\n.desc:before {left: 10px;\n}\n.desc:after {right: 10px;\n}\n.desc p {\r\n    margin: 0; \r\n    padding: 0;\n}\r\n\r\n/****************************\r\n * Hobby\r\n ****************************/\n.btn-brackets {\r\n  width: 100px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.5em 0.7em;\r\n  text-decoration: none;\r\n  color: #000;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\r\n  margin: 1vh 1vw;\n}\n.btn-brackets:hover {\r\n  color: #ff7f7f;\n}\n.btn-brackets:before,\r\n.btn-brackets:after {\r\n  position: absolute;\r\n  top: 0;\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 100%;\r\n  display: inline-block;\n}\n.btn-brackets:before {\r\n  border-left: solid 1px #ff7f7f;\r\n  border-top: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  left: 0;\n}\n.btn-brackets:after {\r\n  content: \"\";\r\n  border-top: solid 1px #ff7f7f;\r\n  border-right: solid 1px #ff7f7f;\r\n  border-bottom: solid 1px #ff7f7f;\r\n  right: 0;\n}\n.box18 {\r\n  margin: 2em 5vw;\r\n  position: relative;\r\n  padding: 0.25em 1em;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 3px 0 3px 0;\n}\n.box18:before,\r\n.box18:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: solid 2px #ffcb8a;\r\n  border-radius: 50%;\n}\n.box18:after {\r\n  top: -12px;\r\n  left: -12px;\n}\n.box18:before {\r\n  bottom: -12px;\r\n  right: -12px;\n}\n.box18 p {\r\n  margin: 0;\r\n  padding: 0;\n}\r\n\r\n/****************************\r\n * Works\r\n ****************************/\n.cssgrid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  grid-gap: 0.8em;\r\n  border: 1px solid #ddd;\r\n  padding: 0.8em;\r\n  margin: 0 0 2em;\n}\n.cssgrid > div {\r\n  background: #ddd;\r\n  overflow: auto;\r\n  min-width: 0;\r\n  padding: 1em;\n}\n.center {\r\n    text-align: center;\n}\r\n", ""]);
 
 
 
@@ -16261,13 +16266,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("article", { staticClass: "test" }, [
-      _c("h1", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "contents" },
-        [
+    _c(
+      "article",
+      { staticClass: "test" },
+      [
+        _c("intro-topic", { attrs: { topic: "Home" } }),
+        _vm._v(" "),
+        _c("div", { staticClass: "contents" }, [
           _vm.now >= 12
             ? _c(
                 "h2",
@@ -16307,11 +16312,53 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("common-component")
-        ],
-        1
-      )
-    ])
+          _c("div", { staticClass: "center" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.checked,
+                  expression: "checked"
+                }
+              ],
+              attrs: { type: "checkbox", id: "checkbox" },
+              domProps: {
+                checked: Array.isArray(_vm.checked)
+                  ? _vm._i(_vm.checked, null) > -1
+                  : _vm.checked
+              },
+              on: {
+                change: function($event) {
+                  var $$a = _vm.checked,
+                    $$el = $event.target,
+                    $$c = $$el.checked ? true : false
+                  if (Array.isArray($$a)) {
+                    var $$v = null,
+                      $$i = _vm._i($$a, $$v)
+                    if ($$el.checked) {
+                      $$i < 0 && (_vm.checked = $$a.concat([$$v]))
+                    } else {
+                      $$i > -1 &&
+                        (_vm.checked = $$a
+                          .slice(0, $$i)
+                          .concat($$a.slice($$i + 1)))
+                    }
+                  } else {
+                    _vm.checked = $$c
+                  }
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("label", { attrs: { for: "checkbox" } }, [
+              _vm._v(_vm._s(_vm.checked))
+            ])
+          ])
+        ])
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -16387,57 +16434,65 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("article", { staticClass: "test" }, [
-      _c("h1", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "contents" },
-        [
-          _c("h2", [_vm._v("経歴")]),
-          _vm._v(" "),
-          _c(
-            "ul",
-            { staticClass: "cp_stepflow07" },
-            _vm._l(_vm.backgrounds, function(background, i) {
-              return _c(
-                "li",
-                {
-                  key: background,
-                  class: { active: _vm.active[i], completed: _vm.completed[i] },
-                  on: {
-                    mouseenter: function($event) {
-                      return _vm.activate(i)
+    _c(
+      "article",
+      { staticClass: "test" },
+      [
+        _c("intro-topic", { attrs: { topic: "About" } }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "contents" },
+          [
+            _c("h2", [_vm._v("経歴")]),
+            _vm._v(" "),
+            _c(
+              "ul",
+              { staticClass: "cp_stepflow07" },
+              _vm._l(_vm.backgrounds, function(background, i) {
+                return _c(
+                  "li",
+                  {
+                    key: background,
+                    class: {
+                      active: _vm.active[i],
+                      completed: _vm.completed[i]
                     },
-                    mouseleave: function($event) {
-                      return _vm.deactivate(i)
-                    },
-                    click: function($event) {
-                      return _vm.toggle_completion(i)
+                    on: {
+                      mouseenter: function($event) {
+                        return _vm.activate(i)
+                      },
+                      mouseleave: function($event) {
+                        return _vm.deactivate(i)
+                      },
+                      click: function($event) {
+                        return _vm.toggle_completion(i)
+                      }
                     }
-                  }
-                },
-                [
-                  _c("span", { staticClass: "bubble" }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v(_vm._s(background))])
-                ]
-              )
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _vm._l(_vm.content_list, function(content, i) {
-            return _c("div", { key: content }, [
-              _vm.active[i] && !_vm.completed[i]
-                ? _c("p", { staticClass: "desc" }, [_vm._v(_vm._s(content))])
-                : _vm._e()
-            ])
-          })
-        ],
-        2
-      )
-    ])
+                  },
+                  [
+                    _c("span", { staticClass: "bubble" }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(background))])
+                  ]
+                )
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _vm._l(_vm.content_list, function(content, i) {
+              return _c("div", { key: content }, [
+                _vm.active[i] && !_vm.completed[i]
+                  ? _c("p", { staticClass: "desc" }, [_vm._v(_vm._s(content))])
+                  : _vm._e()
+              ])
+            })
+          ],
+          2
+        )
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -16513,55 +16568,60 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("article", { staticClass: "test" }, [
-      _c("h1", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "contents" },
-        [
-          _c(
-            "div",
-            _vm._l(_vm.topics, function(topic, i) {
-              return _c(
-                "p",
-                {
-                  key: topic,
-                  staticClass: "btn-brackets",
-                  on: {
-                    click: function($event) {
-                      return _vm.show_content(i)
-                    }
-                  }
-                },
-                [_vm._v(_vm._s(topic))]
-              )
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _vm._l(_vm.contents, function(content, i) {
-            return _c(
+    _c(
+      "article",
+      { staticClass: "test" },
+      [
+        _c("intro-topic", { attrs: { topic: "Hobby" } }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "contents" },
+          [
+            _c(
               "div",
-              {
-                directives: [
+              _vm._l(_vm.topics, function(topic, i) {
+                return _c(
+                  "p",
                   {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.isShow[i],
-                    expression: "isShow[i]"
-                  }
-                ],
-                key: content,
-                staticClass: "box18"
-              },
-              [_vm._v("\n          " + _vm._s(content) + "\n      ")]
-            )
-          })
-        ],
-        2
-      )
-    ])
+                    key: topic,
+                    staticClass: "btn-brackets",
+                    on: {
+                      click: function($event) {
+                        return _vm.show_content(i)
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(topic))]
+                )
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _vm._l(_vm.contents, function(content, i) {
+              return _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.isShow[i],
+                      expression: "isShow[i]"
+                    }
+                  ],
+                  key: content,
+                  staticClass: "box18"
+                },
+                [_vm._v(_vm._s(content))]
+              )
+            })
+          ],
+          2
+        )
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -16637,11 +16697,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("article", { staticClass: "test" }, [
-      _c("h1", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _vm._m(0)
-    ])
+    _c(
+      "article",
+      { staticClass: "test" },
+      [
+        _c("intro-topic", { attrs: { topic: "Works" } }),
+        _vm._v(" "),
+        _vm._m(0)
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [
@@ -16736,11 +16801,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("article", { staticClass: "test" }, [
-      _c("h1", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _vm._m(0)
-    ])
+    _c(
+      "article",
+      { staticClass: "test" },
+      [
+        _c("intro-topic", { attrs: { topic: "Language" } }),
+        _vm._v(" "),
+        _vm._m(0)
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [

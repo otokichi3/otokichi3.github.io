@@ -7,13 +7,9 @@ import router from './router/index.js'
 
 Vue.config.productionTip = false
 
-const PropsComp = {
-    props: ['val'],
-    template: '<h1>{{ val }}</h1>',
-}
-
-Vue.component('common-component', {
-    template: '<h2>共通コンポーネント</h2>',
+Vue.component('intro-topic', {
+    props: ['topic'],
+    template: '<h1>{{ topic }}</h1>',
 })
 
 /* eslint-disable no-new */

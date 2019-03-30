@@ -163,7 +163,7 @@ header ul li.current a {
 	background-color: #fb8c00;
 }
 .desc {
-    margin:2em 15vw;
+    margin:2em 5vw;
     position: relative;
     padding: 0.5em 1.5em;
     border-top: solid 2px black;
@@ -227,7 +227,7 @@ header ul li.current a {
 }
 
 .box18 {
-  margin: 2em 30vw;
+  margin: 2em 5vw;
   position: relative;
   padding: 0.25em 1em;
   border: solid 2px #ffcb8a;

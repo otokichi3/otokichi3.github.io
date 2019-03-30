@@ -1,7 +1,7 @@
 <template>
   <div>
     <article class="test">
-      <h1>{{ title }}</h1>
+      <intro-topic topic="Works"></intro-topic>
       <div class="contents">
         <div class="cssgrid">
           <div>CapitaWorld</div>
