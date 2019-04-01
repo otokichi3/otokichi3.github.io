@@ -3,19 +3,10 @@
     <article class="test">
       <intro-topic topic="Home"></intro-topic>
       <div class="contents">
-        <h2
-          v-if="now >= 12"
-          v-bind:title="message"
-          v-on:click="reverse_message"
-        >{{ after_noon_msg }}</h2>
-        <h2 v-on:click="reverse_message" v-else>{{ noon_msg }}</h2>
+        <h2 @click="reverse_message">{{ greeting }}</h2>
         <div class="center">
           <p class="name_model">You input:&nbsp;{{ name }}</p>
           <input v-model="name">
-        </div>
-        <div class="center">
-            <input type="checkbox" id="checkbox" v-model="checked">
-            <label for="checkbox">{{ checked }}</label>
         </div>
       </div>
     </article>
@@ -35,9 +26,9 @@ export default {
     };
   },
   computed: {
-    now: function() {
+    greeting: function() {
       var date = new Date();
-      return date.getHours();
+      return date.getHours() >= 12 ? this.after_noon_msg : this.noon_msg;
     }
   },
   methods: {

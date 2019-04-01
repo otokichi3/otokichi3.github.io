@@ -7,7 +7,7 @@
           <p
             v-for="(topic, i) in topics"
             :key="topic"
-            v-on:click="show_content(i)"
+            @click="show_content(i)"
             class="btn-brackets"
           >{{ topic }}</p>
         </div>

@@ -8,7 +8,7 @@
           <li
             v-for="(background, i) in backgrounds"
             :key="background"
-            v-bind:class="{ active: active[i], completed: completed[i] }"
+            :class="{ active: active[i], completed: completed[i] }"
             @mouseenter="activate(i)"
             @mouseleave="deactivate(i)"
             @click="toggle_completion(i)"
