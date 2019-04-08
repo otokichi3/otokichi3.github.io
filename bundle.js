@@ -742,6 +742,32 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "Lang",
@@ -16262,15 +16288,15 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "contents" }, [
       _c("div", { staticClass: "cssgrid" }, [
+        _c("div", [_vm._v("コレ")]),
+        _vm._v(" "),
         _c("div", [_vm._v("CapitaWorld")]),
         _vm._v(" "),
-        _c("div", [_vm._v("アイテム2")]),
+        _c("div"),
         _vm._v(" "),
-        _c("div", [_vm._v("アイテム3")]),
+        _c("div"),
         _vm._v(" "),
-        _c("div", [_vm._v("アイテム4")]),
-        _vm._v(" "),
-        _c("div", [_vm._v("アイテム5")])
+        _c("div")
       ])
     ])
   }
@@ -16364,25 +16390,73 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "contents" }, [
-      _c("table", [
-        _c("tr", [
-          _c("th"),
+    return _c(
+      "div",
+      { staticClass: "contents", staticStyle: { align: "center" } },
+      [
+        _c("table", { staticClass: "lang_table" }, [
+          _c("tr", [
+            _c("th"),
+            _vm._v(" "),
+            _c("th", [_vm._v("言語")]),
+            _vm._v(" "),
+            _c("th", [_vm._v("レベル")]),
+            _vm._v(" "),
+            _c("th", [_vm._v("好きな関数・命令")])
+          ]),
           _vm._v(" "),
-          _c("th", [_vm._v("言語")]),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("C")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("大学の実習で２年")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("calloc")])
+          ]),
           _vm._v(" "),
-          _c("th", [_vm._v("レベル")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td"),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("PHP")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("自学＋仕事で１年")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("array_multisort")])
+          ]),
           _vm._v(" "),
-          _c("td", [_vm._v("C")]),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("Java")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("大学の実習で１年間")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("println")])
+          ]),
           _vm._v(" "),
-          _c("td", [_vm._v("大学の実習")])
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("アセンブリ")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("大学の研究などで少々")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("INT 0x80")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("Python")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("研究の合間に少々")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("lambda")])
+          ])
         ])
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
