@@ -531,6 +531,18 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "Home",
@@ -538,24 +550,47 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     return {
       title: "Home",
       message: "v-bind:title",
-      noon_msg: "Good morning visitor",
-      after_noon_msg: "Good afternoon visitor",
-      name: "Please enter your name."
+      noon_msg: "Good morning   ",
+      afternoon_msg: "Good afternoon ",
+      name: "visitor!",
+      is_genio: false,
+      is_yoshizaki: false,
+      is_skill: false
     };
   },
 
   computed: {
     greeting: function greeting() {
       var date = new Date();
-      return date.getHours() >= 12 ? this.after_noon_msg : this.noon_msg;
+      return date.getHours() >= 12 ? this.afternoon_msg : this.noon_msg;
     }
   },
   methods: {
     reverse_message: function reverse_message() {
       if (this.now >= 12) {
-        this.after_noon_msg = this.after_noon_msg.split("").reverse().join("");
+        this.afternoon_msg = this.afternoon_msg.split("").reverse().join("");
       } else {
         this.noon_msg = this.noon_msg.split("").reverse().join("");
+      }
+    },
+    check_name: function check_name() {
+      console.log(this.name);
+      if (this.name === 'genio') {
+        this.is_genio = true;
+        this.is_yoshizaki = false;
+        this.is_skill = false;
+      } else if (this.name === 'yoshizaki') {
+        this.is_yoshizaki = true;
+        this.is_genio = false;
+        this.is_skill = false;
+      } else if (this.name === 'skill') {
+        this.is_genio = false;
+        this.is_yoshizaki = false;
+        this.is_skill = true;
+      } else {
+        this.is_genio = false;
+        this.is_yoshizaki = false;
+        this.is_skill = false;
       }
     }
   }
@@ -15899,14 +15934,13 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "contents" }, [
           _c("h2", { on: { click: _vm.reverse_message } }, [
-            _vm._v(_vm._s(_vm.greeting))
+            _vm._v(_vm._s(_vm.greeting)),
+            _c("span", { staticStyle: { color: "gray" } }, [
+              _vm._v(_vm._s(_vm.name))
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "center" }, [
-            _c("p", { staticClass: "name_model" }, [
-              _vm._v("You input: " + _vm._s(_vm.name))
-            ]),
-            _vm._v(" "),
             _c("input", {
               directives: [
                 {
@@ -15918,6 +15952,7 @@ var render = function() {
               ],
               domProps: { value: _vm.name },
               on: {
+                change: _vm.check_name,
                 input: function($event) {
                   if ($event.target.composing) {
                     return
@@ -15925,7 +15960,66 @@ var render = function() {
                   _vm.name = $event.target.value
                 }
               }
-            })
+            }),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.is_genio,
+                    expression: "is_genio"
+                  }
+                ]
+              },
+              [
+                _c("a", { attrs: { href: "https://genio.co.jp/" } }, [
+                  _vm._v("GENIO")
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.is_yoshizaki,
+                    expression: "is_yoshizaki"
+                  }
+                ]
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "https://github.com/wiethkaty/wiethkaty.github.io"
+                    }
+                  },
+                  [_vm._v("wiethkaty(GitHub)")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.is_skill,
+                    expression: "is_skill"
+                  }
+                ]
+              },
+              [_vm._m(0)]
+            )
           ])
         ])
       ],
@@ -15933,7 +16027,20 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", [
+      _c("li", [_vm._v("世界の首都をだいたい言える！")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("三重跳びが今でも１０回は出来る！")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("バク転！（安全なところなら）")])
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -16390,73 +16497,69 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "contents", staticStyle: { align: "center" } },
-      [
-        _c("table", { staticClass: "lang_table" }, [
-          _c("tr", [
-            _c("th"),
-            _vm._v(" "),
-            _c("th", [_vm._v("言語")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("レベル")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("好きな関数・命令")])
-          ]),
+    return _c("div", { staticClass: "contents" }, [
+      _c("table", { staticClass: "lang_table" }, [
+        _c("tr", [
+          _c("th"),
           _vm._v(" "),
-          _c("tr", [
-            _c("td"),
-            _vm._v(" "),
-            _c("td", [_vm._v("C")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("大学の実習で２年")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("calloc")])
-          ]),
+          _c("th", [_vm._v("言語")]),
           _vm._v(" "),
-          _c("tr", [
-            _c("td"),
-            _vm._v(" "),
-            _c("td", [_vm._v("PHP")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("自学＋仕事で１年")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("array_multisort")])
-          ]),
+          _c("th", [_vm._v("レベル")]),
           _vm._v(" "),
-          _c("tr", [
-            _c("td"),
-            _vm._v(" "),
-            _c("td", [_vm._v("Java")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("大学の実習で１年間")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("println")])
-          ]),
+          _c("th", [_vm._v("好きな関数・命令")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td"),
           _vm._v(" "),
-          _c("tr", [
-            _c("td"),
-            _vm._v(" "),
-            _c("td", [_vm._v("アセンブリ")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("大学の研究などで少々")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("INT 0x80")])
-          ]),
+          _c("td", [_vm._v("C")]),
           _vm._v(" "),
-          _c("tr", [
-            _c("td"),
-            _vm._v(" "),
-            _c("td", [_vm._v("Python")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("研究の合間に少々")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("lambda")])
-          ])
+          _c("td", [_vm._v("大学の実習で２年")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("calloc")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td"),
+          _vm._v(" "),
+          _c("td", [_vm._v("PHP")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("自学＋仕事で１年")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("array_multisort")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td"),
+          _vm._v(" "),
+          _c("td", [_vm._v("Java")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("大学の実習で１年間")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("println")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td"),
+          _vm._v(" "),
+          _c("td", [_vm._v("アセンブリ")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("大学の研究などで少々")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("INT 0x80")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td"),
+          _vm._v(" "),
+          _c("td", [_vm._v("Python")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("研究の合間に少々")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("lambda")])
         ])
-      ]
-    )
+      ])
+    ])
   }
 ]
 render._withStripped = true
