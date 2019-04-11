@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <article class="test">
-      <intro-topic topic="Home"></intro-topic>
-      <div class="contents">
-        <h2 @click="reverse_message">{{ greeting }}<span style="color: gray;">{{ name }}</span></h2>
-        <div class="center">
+  <!-- <div> -->
+    <!-- <article class="test">
+      <intro-topic topic="Home"></intro-topic> -->
+      <!-- <div class="contents"> -->
+        <!-- <h2 @click="reverse_message">{{ greeting }}<span style="color: gray;">{{ name }}</span></h2> -->
+        <div class="welcome_msg">
+            Welcome to Kota's Portfolio!
+        </div>
+        <!-- <div class="center">
           <input @change="check_name" v-model="name">
           <p v-show="is_genio">
               <a href="https://genio.co.jp/">GENIO</a>
@@ -19,10 +22,10 @@
                   <li>バク転！（安全なところなら）</li>
               </ul>
           </p>
-        </div>
-      </div>
-    </article>
-  </div>
+        </div> -->
+      <!-- </div> -->
+    <!-- </article> -->
+  <!-- </div> -->
 </template>
 
 <script>

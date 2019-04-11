@@ -543,6 +543,9 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "Home",
@@ -722,7 +725,6 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
 //
 //
 //
@@ -15925,122 +15927,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "article",
-      { staticClass: "test" },
-      [
-        _c("intro-topic", { attrs: { topic: "Home" } }),
-        _vm._v(" "),
-        _c("div", { staticClass: "contents" }, [
-          _c("h2", { on: { click: _vm.reverse_message } }, [
-            _vm._v(_vm._s(_vm.greeting)),
-            _c("span", { staticStyle: { color: "gray" } }, [
-              _vm._v(_vm._s(_vm.name))
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "center" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.name,
-                  expression: "name"
-                }
-              ],
-              domProps: { value: _vm.name },
-              on: {
-                change: _vm.check_name,
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.name = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.is_genio,
-                    expression: "is_genio"
-                  }
-                ]
-              },
-              [
-                _c("a", { attrs: { href: "https://genio.co.jp/" } }, [
-                  _vm._v("GENIO")
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.is_yoshizaki,
-                    expression: "is_yoshizaki"
-                  }
-                ]
-              },
-              [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "https://github.com/wiethkaty/wiethkaty.github.io"
-                    }
-                  },
-                  [_vm._v("wiethkaty(GitHub)")]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.is_skill,
-                    expression: "is_skill"
-                  }
-                ]
-              },
-              [_vm._m(0)]
-            )
-          ])
-        ])
-      ],
-      1
-    )
+  return _c("div", { staticClass: "welcome_msg" }, [
+    _vm._v("\n          Welcome to Kota's Portfolio!\n      ")
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", [
-      _c("li", [_vm._v("世界の首都をだいたい言える！")]),
-      _vm._v(" "),
-      _c("li", [_vm._v("三重跳びが今でも１０回は出来る！")]),
-      _vm._v(" "),
-      _c("li", [_vm._v("バク転！（安全なところなら）")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -16394,16 +16285,22 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "contents" }, [
-      _c("div", { staticClass: "cssgrid" }, [
-        _c("div", [_vm._v("コレ")]),
+      _c("dl", { staticStyle: { "margin-left": "100px" } }, [
+        _c("dt", [_vm._v("CapitaWorld")]),
         _vm._v(" "),
-        _c("div", [_vm._v("CapitaWorld")]),
+        _c("dd", [
+          _vm._v(
+            "Android アプリ。世界の首都を答える。Android アプリのリリースの勉強のために作成。"
+          )
+        ]),
         _vm._v(" "),
-        _c("div"),
+        _c("dt", [_vm._v("これ自身")]),
         _vm._v(" "),
-        _c("div"),
-        _vm._v(" "),
-        _c("div")
+        _c("dd", [
+          _vm._v(
+            "ポートフォリオページとして作り始めたが、いまいちゴールが見えず。"
+          )
+        ])
       ])
     ])
   }
