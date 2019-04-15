@@ -97,7 +97,10 @@ header ul li.current a {
     font-size: xx-large;
     transform: translate(-50%, -50%);
 }
-
+@media screen and (max-width: 767px) {
+.welcome_msg {
+    font-size: medium;
+}
 /****************************
  * About
  ****************************/
