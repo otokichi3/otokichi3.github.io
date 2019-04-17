@@ -1,11 +1,14 @@
 <template>
-  <!-- <div> -->
+  <div>
     <!-- <article class="test">
       <intro-topic topic="Home"></intro-topic> -->
       <!-- <div class="contents"> -->
         <!-- <h2 @click="reverse_message">{{ greeting }}<span style="color: gray;">{{ name }}</span></h2> -->
-        <div class="welcome_msg">
+        <div class="welcome_msg pc_only">
             Welcome to Kota's Portfolio!
+        </div>
+        <div class="welcome_msg sp_only">
+            Welcome to<br>Kota's Portfolio!
         </div>
         <!-- <div class="center">
           <input @change="check_name" v-model="name">
@@ -25,7 +28,7 @@
         </div> -->
       <!-- </div> -->
     <!-- </article> -->
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>

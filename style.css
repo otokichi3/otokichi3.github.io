@@ -89,7 +89,7 @@ header ul li.current a {
     vertical-align: middle;
 }
 
-.welcome_msg {
+.welcome_msg, .sp_only {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -97,10 +97,16 @@ header ul li.current a {
     transform: translate(-50%, -50%);
 }
 
+.sp_only {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
-    .welcome_msg {
-        font-size: medium;
-        left: 40%;
+    .pc_only {
+        display: none;
+    }
+    .sp_only {
+        display: block;
     }
 }
 
@@ -291,9 +297,9 @@ header ul li.current a {
 
 #cssgrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: 1fr;
-    grid-gap: 0.8em;
+    grid-gap: 3em;
     /* border: 1px solid #; */
     padding: 0.8em;
     margin: 1em 2em;
@@ -305,7 +311,7 @@ header ul li.current a {
     min-width: 0;
     padding: 1em;
     border-radius: 10px 10px 10px 10px;	/* 左上・右上・右下・左下 */ 
-
+    height: 160px;
 }
 
 /****************************

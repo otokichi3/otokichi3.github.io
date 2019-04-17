@@ -546,6 +546,9 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "Home",
@@ -15933,11 +15936,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "welcome_msg" }, [
-    _vm._v("\n          Welcome to Kota's Portfolio!\n      ")
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "welcome_msg pc_only" }, [
+        _vm._v("\n          Welcome to Kota's Portfolio!\n      ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "welcome_msg sp_only" }, [
+        _vm._v("\n          Welcome to"),
+        _c("br"),
+        _vm._v("Kota's Portfolio!\n      ")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
