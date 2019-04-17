@@ -741,6 +741,12 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "self-introduction",
@@ -16269,7 +16275,7 @@ var render = function() {
   return _c("div", [
     _c(
       "article",
-      { staticClass: "test" },
+      { staticClass: "works" },
       [
         _c("intro-topic", { attrs: { topic: "Works" } }),
         _vm._v(" "),
@@ -16285,22 +16291,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "contents" }, [
-      _c("dl", { staticStyle: { "margin-left": "100px" } }, [
-        _c("dt", [_vm._v("CapitaWorld")]),
+      _c("div", { attrs: { id: "cssgrid" } }, [
+        _c("div", [_vm._v("CapitaWorld")]),
         _vm._v(" "),
-        _c("dd", [
-          _vm._v(
-            "Android アプリ。世界の首都を答える。Android アプリのリリースの勉強のために作成。"
-          )
-        ]),
+        _c("div", [_vm._v("To Be Released")]),
         _vm._v(" "),
-        _c("dt", [_vm._v("これ自身")]),
+        _c("div", [_vm._v("To Be Released")]),
         _vm._v(" "),
-        _c("dd", [
-          _vm._v(
-            "ポートフォリオページとして作り始めたが、いまいちゴールが見えず。"
-          )
-        ])
+        _c("div", [_vm._v("To Be Released")])
       ])
     ])
   }

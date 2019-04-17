@@ -1,14 +1,20 @@
 <template>
   <div>
-    <article class="test">
+    <article class="works">
       <intro-topic topic="Works"></intro-topic>
       <div class="contents">
-          <dl style="margin-left: 100px;">
+          <div id="cssgrid">
+            <div>CapitaWorld</div>
+            <div>To Be Released</div>
+            <div>To Be Released</div>
+            <div>To Be Released</div>
+          </div>
+          <!-- <dl style="margin-left: 100px;">
               <dt>CapitaWorld</dt>
               <dd>Android アプリ。世界の首都を答える。Android アプリのリリースの勉強のために作成。</dd>
               <dt>これ自身</dt>
               <dd>ポートフォリオページとして作り始めたが、いまいちゴールが見えず。</dd>
-          </dl>
+          </dl> -->
       </div>
     </article>
   </div>
