@@ -750,6 +750,21 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "self-introduction",
@@ -16310,13 +16325,23 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "contents" }, [
       _c("div", { attrs: { id: "cssgrid" } }, [
-        _c("div", [_vm._v("CapitaWorld")]),
+        _c("div", [
+          _c("p", { staticClass: "box-header" }, [
+            _vm._v("\n                  CapitaWorld\n              ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "box-contents" }, [
+            _vm._v(
+              "\n                  初リリースの Android アプリ。世界の国々が順番に表示されるため、\n                  表示された国の首都を答えるというだけのシンプルなアプリ。\n                  Android アプリリリースの一通りの流れは勉強出来た。\n              "
+            )
+          ])
+        ]),
         _vm._v(" "),
-        _c("div", [_vm._v("To Be Released")]),
+        _c("div", [_vm._v("\n              To Be Appeared\n          ")]),
         _vm._v(" "),
-        _c("div", [_vm._v("To Be Released")]),
+        _c("div", [_vm._v("\n              To Be Appeared\n          ")]),
         _vm._v(" "),
-        _c("div", [_vm._v("To Be Released")])
+        _c("div", [_vm._v("\n              To Be Appeared\n          ")])
       ])
     ])
   }

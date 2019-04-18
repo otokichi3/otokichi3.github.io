@@ -98,6 +98,7 @@ header ul li.current a {
 }
 
 .sp_only {
+    font-size: medium;
     display: none;
 }
 
