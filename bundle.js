@@ -765,6 +765,18 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "self-introduction",
@@ -781,12 +793,6 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -16337,9 +16343,31 @@ var staticRenderFns = [
           ])
         ]),
         _vm._v(" "),
-        _c("div", [_vm._v("\n              To Be Appeared\n          ")]),
+        _c("div", [
+          _c("p", { staticClass: "box-header" }, [
+            _vm._v("\n                  REST API\n              ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "box-contents" }, [
+            _vm._v(
+              "\n                  Laravel を使って何かをしたかったから作った REST API 。\n                  OAuth 認証を使用。また AWS S3 上で構築。色々勉強となった。\n              "
+            )
+          ])
+        ]),
         _vm._v(" "),
-        _c("div", [_vm._v("\n              To Be Appeared\n          ")]),
+        _c("div", [
+          _c("p", { staticClass: "box-header" }, [
+            _vm._v(
+              "\n                  バドの自動組み合わせ(TBA)\n              "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "box-contents" }, [
+            _vm._v(
+              "\n                  所属するサークルで、数十人の試合の組み合わせを考えるのが大変だと感じたため、\n                  負担軽減のために作成予定。\n              "
+            )
+          ])
+        ]),
         _vm._v(" "),
         _c("div", [_vm._v("\n              To Be Appeared\n          ")])
       ])
@@ -16438,8 +16466,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "contents" }, [
       _c("table", { staticClass: "lang_table" }, [
         _c("tr", [
-          _c("th"),
-          _vm._v(" "),
           _c("th", [_vm._v("言語")]),
           _vm._v(" "),
           _c("th", [_vm._v("レベル")]),
@@ -16448,8 +16474,6 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td"),
-          _vm._v(" "),
           _c("td", [_vm._v("C")]),
           _vm._v(" "),
           _c("td", [_vm._v("大学の実習で２年")]),
@@ -16458,8 +16482,6 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td"),
-          _vm._v(" "),
           _c("td", [_vm._v("PHP")]),
           _vm._v(" "),
           _c("td", [_vm._v("自学＋仕事で１年")]),
@@ -16468,8 +16490,6 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td"),
-          _vm._v(" "),
           _c("td", [_vm._v("Java")]),
           _vm._v(" "),
           _c("td", [_vm._v("大学の実習で１年間")]),
@@ -16478,8 +16498,6 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td"),
-          _vm._v(" "),
           _c("td", [_vm._v("アセンブリ")]),
           _vm._v(" "),
           _c("td", [_vm._v("大学の研究などで少々")]),
@@ -16488,8 +16506,6 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td"),
-          _vm._v(" "),
           _c("td", [_vm._v("Python")]),
           _vm._v(" "),
           _c("td", [_vm._v("研究の合間に少々")]),
