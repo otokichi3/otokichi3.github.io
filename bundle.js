@@ -15951,7 +15951,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "welcome_msg sp_only" }, [
         _vm._v("\n      Life is"),
         _c("br"),
-        _vm._v("like a easy game.\n  ")
+        _vm._v("  like a easy game.\n  ")
       ])
     ])
   }

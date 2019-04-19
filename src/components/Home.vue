@@ -4,7 +4,7 @@
         Life is like a easy game.
     </div>
     <div class="welcome_msg sp_only">
-        Life is<br>like a easy game.
+        Life is<br>&nbsp;&nbsp;like a easy game.
     </div>
   </div>
 </template>
