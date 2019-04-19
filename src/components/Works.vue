@@ -12,6 +12,7 @@
                     初リリースの Android アプリ。世界の国々が順番に表示されるため、
                     表示された国の首都を答えるというだけのシンプルなアプリ。
                     Android アプリリリースの一通りの流れは勉強出来た。
+                    <a href="http://ur0.link/cZFw" target="_blank" rel="noopener noreferrer">Google Play</a>  
                 </p>
             </div>
             <div>

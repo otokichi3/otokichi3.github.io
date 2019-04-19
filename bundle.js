@@ -527,28 +527,6 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "Home",
@@ -728,6 +706,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
 //
 //
 //
@@ -15966,13 +15945,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("div", { staticClass: "welcome_msg pc_only" }, [
-        _vm._v("\n          Welcome to Kota's Portfolio!\n      ")
+        _vm._v("\n      Life is like a easy game.\n  ")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "welcome_msg sp_only" }, [
-        _vm._v("\n          Welcome to"),
+        _vm._v("\n      Life is"),
         _c("br"),
-        _vm._v("Kota's Portfolio!\n      ")
+        _vm._v("like a easy game.\n  ")
       ])
     ])
   }
@@ -16074,7 +16053,7 @@ var render = function() {
                       completed: _vm.completed[i]
                     },
                     on: {
-                      mouseover: function($event) {
+                      mouseenter: function($event) {
                         return _vm.activate(i)
                       },
                       mouseleave: function($event) {
@@ -16338,7 +16317,18 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "box-contents" }, [
             _vm._v(
-              "\n                  初リリースの Android アプリ。世界の国々が順番に表示されるため、\n                  表示された国の首都を答えるというだけのシンプルなアプリ。\n                  Android アプリリリースの一通りの流れは勉強出来た。\n              "
+              "\n                  初リリースの Android アプリ。世界の国々が順番に表示されるため、\n                  表示された国の首都を答えるというだけのシンプルなアプリ。\n                  Android アプリリリースの一通りの流れは勉強出来た。\n                  "
+            ),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "http://ur0.link/cZFw",
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                }
+              },
+              [_vm._v("Google Play")]
             )
           ])
         ]),

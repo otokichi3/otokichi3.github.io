@@ -1,33 +1,11 @@
 <template>
   <div>
-    <!-- <article class="test">
-      <intro-topic topic="Home"></intro-topic> -->
-      <!-- <div class="contents"> -->
-        <!-- <h2 @click="reverse_message">{{ greeting }}<span style="color: gray;">{{ name }}</span></h2> -->
-        <div class="welcome_msg pc_only">
-            Welcome to Kota's Portfolio!
-        </div>
-        <div class="welcome_msg sp_only">
-            Welcome to<br>Kota's Portfolio!
-        </div>
-        <!-- <div class="center">
-          <input @change="check_name" v-model="name">
-          <p v-show="is_genio">
-              <a href="https://genio.co.jp/">GENIO</a>
-          </p>
-          <p v-show="is_yoshizaki">
-              <a href="https://github.com/wiethkaty/wiethkaty.github.io">wiethkaty(GitHub)</a>
-          </p>
-          <p v-show="is_skill">
-              <ul>
-                  <li>世界の首都をだいたい言える！</li>
-                  <li>三重跳びが今でも１０回は出来る！</li>
-                  <li>バク転！（安全なところなら）</li>
-              </ul>
-          </p>
-        </div> -->
-      <!-- </div> -->
-    <!-- </article> -->
+    <div class="welcome_msg pc_only">
+        Life is like a easy game.
+    </div>
+    <div class="welcome_msg sp_only">
+        Life is<br>like a easy game.
+    </div>
   </div>
 </template>
 
