@@ -16074,7 +16074,7 @@ var render = function() {
                       completed: _vm.completed[i]
                     },
                     on: {
-                      mouseenter: function($event) {
+                      mouseover: function($event) {
                         return _vm.activate(i)
                       },
                       mouseleave: function($event) {
