@@ -9,7 +9,7 @@
             v-for="(background, i) in backgrounds"
             :key="background"
             :class="{ active: active[i], completed: completed[i] }"
-            @mouseover="activate(i)"
+            @mouseenter="activate(i)"
             @mouseleave="deactivate(i)"
             @click="toggle_completion(i)"
           >

@@ -123,6 +123,7 @@ header ul li.current a {
     display: flex;
     margin: 0 0 1em;
     padding: 0;
+    margin: 0 10vw;
 }
 
 .cp_stepflow07>li {
