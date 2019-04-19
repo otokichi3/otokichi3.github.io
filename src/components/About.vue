@@ -30,14 +30,14 @@ export default {
   name: "About",
   data() {
     return {
-      title: "About",
-      backgrounds: ["高校", "大学", "大学院", "最初の会社", "現在の会社"],
-      active: [false, false, false, false, false],
-      completed: [false, false, false, false, false],
+      title:        "About",
+      backgrounds:  ["高校",  "大学",  "大学院", "最初の会社", "現在の会社"],
+      active:       [false, false, false, false,   false],
+      completed:    [false, false, false, false,   false],
       content_list: [
         `
           普通科に進学。学業はそれなりで、部活もそれなり。進学校ではなかったが、
-          無事岡山大学に入学した。所属していた軟式テニス部では初心者始めながら、
+          無事岡山大学に入学した。高校のとき所属していた軟式テニス部では初心者始めながら、
           副キャプテンの前衛を務め、県大会の団体戦ベスト８に貢献。
         `,
         `

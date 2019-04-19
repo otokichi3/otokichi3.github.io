@@ -231,7 +231,7 @@ header ul li.current a {
 }
 
 .btn-brackets:hover {
-    color: #ff7f7f;
+    color: gray;
 }
 
 .btn-brackets:before,
@@ -245,25 +245,25 @@ header ul li.current a {
 }
 
 .btn-brackets:before {
-    border-left: solid 1px #ff7f7f;
-    border-top: solid 1px #ff7f7f;
-    border-bottom: solid 1px #ff7f7f;
+    border-left: solid 1px black;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
     left: 0;
 }
 
 .btn-brackets:after {
     content: "";
-    border-top: solid 1px #ff7f7f;
-    border-right: solid 1px #ff7f7f;
-    border-bottom: solid 1px #ff7f7f;
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
     right: 0;
 }
 
 .box18 {
     margin: 2em 5vw;
     position: relative;
-    padding: 0.25em 1em;
-    border: solid 2px #ffcb8a;
+    padding: 1.5em 1em;
+    border: solid 2px darkgray;
     border-radius: 3px 0 3px 0;
 }
 
@@ -273,7 +273,7 @@ header ul li.current a {
     position: absolute;
     width: 10px;
     height: 10px;
-    border: solid 2px #ffcb8a;
+    border: solid 2px darkgray;
     border-radius: 50%;
 }
 

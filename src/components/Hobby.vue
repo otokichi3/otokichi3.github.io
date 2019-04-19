@@ -35,15 +35,15 @@ export default {
         "勉強",
         "ボードゲーム"
       ],
-      isShow: [false, false, false, false, false, false, false],
+      isShow:      [false, false, false, false, false, false, false],
       isBadminton: false,
-      isRunning: false,
-      isClimbing: false,
-      isCycling: false,
-      isNovel: false,
-      isStudy: false,
+      isRunning:   false,
+      isClimbing:  false,
+      isCycling:   false,
+      isNovel:     false,
+      isStudy:     false,
       isBoardGame: false,
-      contents: [
+      contents:    [
         `
           週に一度ほど、大阪市内の体育館で社会人サークルとして活動しています。
           最近は代表代理として運営にも携わっています。大変です。
