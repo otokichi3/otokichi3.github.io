@@ -5,6 +5,7 @@ import About from '../components/About.vue'
 import Hobby from '../components/Hobby.vue'
 import Works from '../components/Works.vue'
 import Lang from '../components/Lang.vue'
+import Kumiton from '../components/Kumiton.vue'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/lang',
       name: 'Language',
       component: Lang
+    },
+    {
+      path: '/kumiton',
+      name: 'Kumiton',
+      component: Kumiton
     }
   ]
 })

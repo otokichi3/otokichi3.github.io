@@ -6,13 +6,12 @@
           <div id="cssgrid">
             <div>
                 <p class="box-header">
-                    CapitaWorld
+                    <a href="http://ur0.link/cZFw" target="_blank" rel="noopener noreferrer">CapitaWorld</a>  
                 </p>
                 <p class="box-contents">
                     初リリースの Android アプリ。世界の国々が順番に表示されるため、
                     表示された国の首都を答えるというだけのシンプルなアプリ。
                     Android アプリリリースの一通りの流れは勉強出来た。
-                    <a href="http://ur0.link/cZFw" target="_blank" rel="noopener noreferrer">Google Play</a>  
                 </p>
             </div>
             <div>
@@ -26,7 +25,7 @@
             </div>
             <div>
                 <p class="box-header">
-                    バドの自動組み合わせ(TBA)
+                    <router-link tag="a" to="/kumiton">組みとん</router-link>
                 </p>
                 <p class="box-contents">
                     所属するサークルで、数十人の試合の組み合わせを考えるのが大変だと感じたため、
